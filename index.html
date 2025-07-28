@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henry Martin's music taste, by the numbers</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/holiday.css@0.11.2" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --max-body-width: 90% !important;
+        }
+
+        .chart-container {
+            max-width: 90vw;
+            margin-bottom: 4rem;
+        }
+
+        .chart-container.small {
+            max-width: 50vw;
+        }
+
+        .chart-container.xs {
+            max-width: 30vw;
+        }
+
+        /* Styles for the new song list modal */
+        #songListModal {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 2rem;
+            max-width: 600px;
+            width: 90%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        #songListModal::backdrop {
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        #songListModal header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        #songListModal h3 {
+            margin: 0;
+        }
+        
+        #songListModal ul {
+            max-height: 60vh;
+            overflow-y: auto;
+            padding-left: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Henry Martin's music taste, by the numbers</h1>
+        <p>Click on any bar or chart segment to see the songs inside!</p>
+    </header>
+
+    <!-- Modal Dialog for displaying song lists -->
+    <dialog id="songListModal">
+        <header>
+            <h3 id="modalTitle">Songs</h3>
+            <button id="modalCloseButton" aria-label="Close">X</button>
+        </header>
+        <ul id="songList"></ul>
+    </dialog>
+
+    <main>
+        <div class="chart-container">
+            <h2>Top Genres</h2>
+            <canvas id="genreChart"></canvas>
+        </div>
+
+        <div class="chart-container small">
+            <h2>Songs by Decade</h2>
+            <canvas id="decadeChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <h2>Songs by Year</h2>
+            <canvas id="yearChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <h2>Top Artists</h2>
+            <canvas id="artistChart"></canvas>
+        </div>
+
+        <div class="chart-container small">
+            <h2>Song Duration</h2>
+            <canvas id="durationHistogramChart"></canvas>
+        </div>
+
+        <div class="chart-container xs">
+            <h2>Songs by Number of Artists</h2>
+            <canvas id="collaborationChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <h2>Explicitness by Genre</h2>
+            <canvas id="genreExplicitnessChart"></canvas>
+        </div>
+
+        <div class="chart-container xs">
+            <h2>Explicit Content (Overall)</h2>
+            <canvas id="explicitChart"></canvas>
+        </div>
+    </main>
+
+    <script>
+        async function init() {
+            const response = await fetch('out.json');
+            const songs = await response.json();
+
+            const modal = document.getElementById('songListModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const songList = document.getElementById('songList');
+            const modalCloseButton = document.getElementById('modalCloseButton');
+
+            modalCloseButton.addEventListener('click', () => modal.close());
+            modal.addEventListener('click', (e) => {
+                 if (e.target === modal) modal.close();
+            });
+
+            function showSongsInModal(filterType, filterValue) {
+                let filteredSongs = [];
+                let title = '';
+
+                switch (filterType) {
+                    case 'genre':
+                        title = `Genre: ${filterValue}`;
+                        filteredSongs = songs.filter(s => (s.genres || []).includes(filterValue));
+                        break;
+                    case 'decade':
+                        const decadeStart = parseInt(filterValue.replace('s', ''));
+                        title = `Decade: ${filterValue}`;
+                        filteredSongs = songs.filter(s => {
+                            if (!s.year) return false;
+                            const year = parseInt(s.year);
+                            return year >= decadeStart && year < decadeStart + 10;
+                        });
+                        break;
+                    case 'year':
+                        title = `Year: ${filterValue}`;
+                        filteredSongs = songs.filter(s => s.year === filterValue);
+                        break;
+                    case 'artist':
+                         title = `Artist: ${filterValue}`;
+                        filteredSongs = songs.filter(s => (s.artists || []).includes(filterValue));
+                        break;
+                    case 'explicit':
+                        const isExplicit = filterValue === 'Explicit';
+                        title = `${filterValue} Songs`;
+                        filteredSongs = songs.filter(s => s.is_explicit === isExplicit);
+                        break;
+                    case 'duration':
+                        title = `Duration: ${filterValue}`;
+                        filteredSongs = songsInDurationBins[filterValue];
+                        break;
+                    case 'collaboration':
+                        const numArtists = parseInt(filterValue);
+                        title = `${numArtists} Artist${numArtists > 1 ? 's' : ''} on a Song`;
+                        filteredSongs = songs.filter(s => (s.artists || []).length === numArtists);
+                        break;
+                }
+
+                modalTitle.textContent = `${title} (${filteredSongs.length} songs)`;
+                songList.innerHTML = '';
+
+                if (filteredSongs.length > 0) {
+                    filteredSongs
+                        .sort((a,b) => a.title.localeCompare(b.title))
+                        .forEach(song => {
+                            const li = document.createElement('li');
+                            li.textContent = `${song.artists.join(', ')} - ${song.title}`;
+                            songList.appendChild(li);
+                        });
+                } else {
+                     const li = document.createElement('li');
+                     li.textContent = 'No songs found for this category.';
+                     songList.appendChild(li);
+                }
+
+                modal.showModal();
+            }
+            
+            function createClickHandler(chart, filterType) {
+                return function(event) {
+                    const points = chart.getElementsAtEventForMode(event, 'nearest', { intersect: true }, true);
+                    if (points.length) {
+                        const firstPoint = points[0];
+                        const label = chart.data.labels[firstPoint.index];
+                        showSongsInModal(filterType, label);
+                    }
+                };
+            }
+
+            const genreCounts = {};
+            songs.forEach(song => {
+                (song.genres || []).forEach(genre => {
+                    genreCounts[genre] = (genreCounts[genre] || 0) + 1;
+                });
+            });
+            const sortedGenres = Object.entries(genreCounts).sort(([, a], [, b]) => b - a).slice(0, 150);
+
+            const decadeCounts = {};
+            const yearCounts = {};
+            songs.forEach(song => {
+                if (song.year) {
+                    const year = parseInt(song.year);
+                    yearCounts[year] = (yearCounts[year] || 0) + 1;
+                    const decade = Math.floor(year / 10) * 10;
+                    decadeCounts[decade] = (decadeCounts[decade] || 0) + 1;
+                }
+            });
+            const sortedDecades = Object.entries(decadeCounts).sort(([a], [b]) => parseInt(a) - parseInt(b));
+            const sortedYears = Object.entries(yearCounts).sort(([a], [b]) => parseInt(a) - parseInt(b));
+
+            const artistCounts = {};
+            songs.forEach(song => {
+                (song.artists || []).forEach(artist => {
+                    artistCounts[artist] = (artistCounts[artist] || 0) + 1;
+                });
+            });
+            const sortedArtists = Object.entries(artistCounts).sort(([, a], [, b]) => b - a).slice(0, 150);
+
+            const explicitCount = songs.filter(song => song.is_explicit).length;
+            const notExplicitCount = songs.length - explicitCount;
+
+            const durationBins = {
+                '0-1 min': 0,
+                '1-2 mins': 0,
+                '2-3 mins': 0,
+                '3-4 mins': 0,
+                '4-5 mins': 0,
+                '5-6 mins': 0,
+                '6-7 mins': 0,
+                '7+ mins': 0,
+            };
+
+            // This object will store the actual song objects for your modal.
+            const songsInDurationBins = {
+                '0-1 min': [],
+                '1-2 mins': [],
+                '2-3 mins': [],
+                '3-4 mins': [],
+                '4-5 mins': [],
+                '5-6 mins': [],
+                '6-7 mins': [],
+                '7+ mins': [],
+            };
+
+            songs.forEach(song => {
+                const durationS = song.duration;
+
+                const durationMin = durationS / 60;
+
+                let binLabel = '';
+
+                if (durationMin < 1) {
+                    binLabel = '0-1 min';
+                } else if (durationMin < 2) {
+                    binLabel = '1-2 mins';
+                } else if (durationMin < 3) {
+                    binLabel = '2-3 mins';
+                } else if (durationMin < 4) {
+                    binLabel = '3-4 mins';
+                } else if (durationMin < 5) {
+                    binLabel = '4-5 mins';
+                } else if (durationMin < 6) {
+                    binLabel = '5-6 mins';
+                } else if (durationMin < 7) {
+                    binLabel = '6-7 mins';
+                } else {
+                    binLabel = '7+ mins';
+                }
+                
+                if(binLabel) {
+                    durationBins[binLabel]++;
+                    songsInDurationBins[binLabel].push(song);
+                }
+            });
+
+            const collabCounts = {};
+            songs.forEach(song => {
+                const numArtists = (song.artists || []).length;
+                if (numArtists > 0) {
+                    collabCounts[numArtists] = (collabCounts[numArtists] || 0) + 1;
+                }
+            });
+            const collabLabels = Object.keys(collabCounts).map(k => `${k} Artist${k > 1 ? 's' : ''}`);
+
+            const topGenresForExplicitness = sortedGenres.slice(0, 25).map(item => item[0]);
+            const genreExplicitnessData = {}; 
+            topGenresForExplicitness.forEach(genre => genreExplicitnessData[genre] = { explicit: 0, not_explicit: 0 });
+            songs.forEach(song => {
+                (song.genres || []).forEach(genre => {
+                    if (genreExplicitnessData[genre]) {
+                        if (song.is_explicit) genreExplicitnessData[genre].explicit++;
+                        else genreExplicitnessData[genre].not_explicit++;
+                    }
+                });
+            });
+            const explicitDataset = {
+                label: 'Explicit',
+                data: topGenresForExplicitness.map(g => genreExplicitnessData[g].explicit),
+                backgroundColor: '#ff6384'
+            };
+            const notExplicitDataset = {
+                label: 'Not Explicit',
+                data: topGenresForExplicitness.map(g => genreExplicitnessData[g].not_explicit),
+                backgroundColor: '#36a2eb'
+            };
+
+            const genreChart = new Chart(document.getElementById('genreChart'), {
+                type: 'bar',
+                data: { labels: sortedGenres.map(item => item[0]), datasets: [{ label: '# of Songs', data: sortedGenres.map(item => item[1]), backgroundColor: '#ff6384' }] },
+                options: { indexAxis: 'y', plugins: { legend: { display: false } }, onClick: createClickHandler(this, 'genre') }
+            });
+            genreChart.options.onClick = createClickHandler(genreChart, 'genre');
+
+            const decadeChart = new Chart(document.getElementById('decadeChart'), {
+                type: 'bar',
+                data: { labels: sortedDecades.map(item => `${item[0]}s`), datasets: [{ label: '# of Songs', data: sortedDecades.map(item => item[1]), backgroundColor: '#36a2eb' }] },
+                options: { plugins: { legend: { display: false } } }
+            });
+            decadeChart.options.onClick = createClickHandler(decadeChart, 'decade');
+
+            const yearChart = new Chart(document.getElementById('yearChart'), {
+                type: 'bar',
+                data: { labels: sortedYears.map(item => item[0]), datasets: [{ label: '# of Songs', data: sortedYears.map(item => item[1]), backgroundColor: '#4bc0c0' }] },
+                options: { plugins: { legend: { display: false } }, scales: { x: { ticks: { autoSkip: false, maxRotation: 90, minRotation: 90, font: { size: 11 } } } } }
+            });
+            yearChart.options.onClick = createClickHandler(yearChart, 'year');
+
+            const artistChart = new Chart(document.getElementById('artistChart'), {
+                type: 'bar',
+                data: { labels: sortedArtists.map(item => item[0]), datasets: [{ label: '# of Songs', data: sortedArtists.map(item => item[1]), backgroundColor: '#ffce56' }] },
+                options: { indexAxis: 'y', plugins: { legend: { display: false } } }
+            });
+            artistChart.options.onClick = createClickHandler(artistChart, 'artist');
+            
+            const explicitChart = new Chart(document.getElementById('explicitChart'), {
+                type: 'doughnut',
+                data: { labels: ['Explicit', 'Not Explicit'], datasets: [{ data: [explicitCount, notExplicitCount], backgroundColor: ['#cc65fe', '#4bc0c0'], }] },
+                options: {}
+            });
+            explicitChart.options.onClick = createClickHandler(explicitChart, 'explicit');
+
+            const durationHistogramChart = new Chart(document.getElementById('durationHistogramChart'), {
+                type: 'bar',
+                data: { labels: Object.keys(durationBins), datasets: [{ data: Object.values(durationBins), backgroundColor: '#ff9f40' }] },
+                options: { plugins: { legend: { display: false } } }
+            });
+            durationHistogramChart.options.onClick = createClickHandler(durationHistogramChart, 'duration');
+            
+            const collaborationChart = new Chart(document.getElementById('collaborationChart'), {
+                type: 'bar',
+                data: { labels: Object.keys(collabCounts), datasets: [{ data: Object.values(collabCounts), backgroundColor: '#ff6384' }] },
+                options: { plugins: { legend: { display: false } } }
+            });
+            collaborationChart.options.onClick = createClickHandler(collaborationChart, 'collaboration');
+
+            const genreExplicitnessChart = new Chart(document.getElementById('genreExplicitnessChart'), {
+                type: 'bar',
+                data: {
+                    labels: topGenresForExplicitness,
+                    datasets: [notExplicitDataset, explicitDataset]
+                },
+                options: {
+                    indexAxis: 'y',
+                    scales: {
+                        x: { stacked: true },
+                        y: { stacked: true }
+                    }
+                }
+            });
+            genreExplicitnessChart.options.onClick = function(event) {
+                    const points = genreExplicitnessChart.getElementsAtEventForMode(event, 'nearest', { intersect: true }, true);
+                    if (points.length) {
+                        const firstPoint = points[0];
+                        const label = genreExplicitnessChart.data.labels[firstPoint.index];
+                        showSongsInModal('genre', label);
+                    }
+            };
+        }
+
+        init();
+    </script>
+</body>
+
+</html>

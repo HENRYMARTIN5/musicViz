@@ -1,0 +1,11 @@
+[project]
+name = "musicviz"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "musicbrainzngs>=0.7.1",
+    "tqdm>=4.67.1",
+    "ytmusicapi>=1.10.3",
+]
