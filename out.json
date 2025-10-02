@@ -1,5 +1,2920 @@
 [
   {
+    "title": "Gee Willikers!",
+    "artists": [
+      "Alex Schor",
+      "Digbar"
+    ],
+    "is_explicit": true,
+    "duration": 157,
+    "genres": [
+      "blues rock",
+      "boogie rock",
+      "hard rock",
+      "piano rock",
+      "progressive rock",
+      "psychedelic rock"
+    ],
+    "album": "Gee Willikers!",
+    "year": "2024"
+  },
+  {
+    "title": "Can You Feel My Heart",
+    "artists": [
+      "Bring Me The Horizon"
+    ],
+    "is_explicit": true,
+    "duration": 229,
+    "genres": [
+      "alternative metal",
+      "alternative rock",
+      "deathcore",
+      "electronic",
+      "electronic rock",
+      "emo",
+      "melodic metalcore",
+      "metalcore",
+      "nu metal",
+      "pop rock",
+      "post-hardcore",
+      "psychedelic rock"
+    ],
+    "album": "Sempiternal",
+    "year": "2013"
+  },
+  {
+    "title": "Arrow of Time",
+    "artists": [
+      "Andrew Prahlow"
+    ],
+    "is_explicit": false,
+    "duration": 38,
+    "genres": [],
+    "album": "Outer Wilds (Original Soundtrack)",
+    "year": "2019"
+  },
+  {
+    "title": "Travelers",
+    "artists": [
+      "Andrew Prahlow"
+    ],
+    "is_explicit": false,
+    "duration": 211,
+    "genres": [],
+    "album": "Outer Wilds (Original Soundtrack)",
+    "year": "2019"
+  },
+  {
+    "title": "I Write Sins Not Tragedies",
+    "artists": [
+      "Coletta"
+    ],
+    "is_explicit": false,
+    "duration": 192,
+    "genres": [],
+    "album": "A Fever You Can't Sweat Out",
+    "year": "2025"
+  },
+  {
+    "title": "Counterfeit Shrines",
+    "artists": [
+      "Eidola"
+    ],
+    "is_explicit": false,
+    "duration": 275,
+    "genres": [
+      "alternative hardcore",
+      "swancore"
+    ],
+    "album": "Counterfeit Shrines",
+    "year": "2021"
+  },
+  {
+    "title": "The Fantastic Tale of Dr. Moog and the Birth of the Shimmering Beast",
+    "artists": [
+      "I Monster"
+    ],
+    "is_explicit": false,
+    "duration": 319,
+    "genres": [
+      "downtempo",
+      "electro",
+      "electronic",
+      "electronica",
+      "electropop",
+      "hauntology",
+      "neo-psychedelia",
+      "sampledelia",
+      "sheffield",
+      "synth-pop",
+      "trip hop"
+    ],
+    "album": "Bright Sparks",
+    "year": "2016"
+  },
+  {
+    "title": "Echoes of the Eye Soundtrack - The Forbidden Archives",
+    "artists": [
+      "Klav"
+    ],
+    "is_explicit": false,
+    "duration": 136,
+    "genres": [],
+    "album": "Unknown Album",
+    "year": null
+  },
+  {
+    "title": "Echoes of the Eye Soundtrack - Elegy for the Rings",
+    "artists": [
+      "Klav"
+    ],
+    "is_explicit": false,
+    "duration": 119,
+    "genres": [],
+    "album": "Unknown Album",
+    "year": null
+  },
+  {
+    "title": "Echoes of the Eye Soundtrack - Travelers\u2019 Encore",
+    "artists": [
+      "Klav"
+    ],
+    "is_explicit": false,
+    "duration": 230,
+    "genres": [],
+    "album": "Unknown Album",
+    "year": null
+  },
+  {
+    "title": "Echoes of the Eye Soundtrack - Echoes of the Eye",
+    "artists": [
+      "Klav"
+    ],
+    "is_explicit": false,
+    "duration": 150,
+    "genres": [],
+    "album": "Unknown Album",
+    "year": null
+  },
+  {
+    "title": "Echoes of the Eye Soundtrack - The River",
+    "artists": [
+      "Klav"
+    ],
+    "is_explicit": false,
+    "duration": 162,
+    "genres": [
+      "alternative",
+      "alternative rock",
+      "dark",
+      "gay",
+      "k-pop",
+      "pc music",
+      "pop",
+      "queer",
+      "synthpop",
+      "vogue"
+    ],
+    "album": "Unknown Album",
+    "year": null
+  },
+  {
+    "title": "14.3 Billion Years",
+    "artists": [
+      "Andrew Prahlow"
+    ],
+    "is_explicit": false,
+    "duration": 321,
+    "genres": [],
+    "album": "Outer Wilds (Original Soundtrack)",
+    "year": "2019"
+  },
+  {
+    "title": "Outer Wilds - Reprise",
+    "artists": [
+      "Andrew Prahlow"
+    ],
+    "is_explicit": false,
+    "duration": 341,
+    "genres": [],
+    "album": "Outer Wilds - Reprise",
+    "year": "2020"
+  },
+  {
+    "title": "Timber Hearth",
+    "artists": [
+      "Andrew Prahlow"
+    ],
+    "is_explicit": false,
+    "duration": 205,
+    "genres": [],
+    "album": "Outer Wilds (Original Soundtrack)",
+    "year": "2019"
+  },
+  {
+    "title": "The Sun Station",
+    "artists": [
+      "Andrew Prahlow"
+    ],
+    "is_explicit": false,
+    "duration": 159,
+    "genres": [],
+    "album": "Outer Wilds (Original Soundtrack)",
+    "year": "2019"
+  },
+  {
+    "title": "Final Voyage",
+    "artists": [
+      "Andrew Prahlow"
+    ],
+    "is_explicit": false,
+    "duration": 159,
+    "genres": [],
+    "album": "Outer Wilds (Original Soundtrack)",
+    "year": "2019"
+  },
+  {
+    "title": "Campfire Song",
+    "artists": [
+      "Andrew Prahlow"
+    ],
+    "is_explicit": false,
+    "duration": 126,
+    "genres": [],
+    "album": "Outer Wilds (Original Soundtrack)",
+    "year": "2019"
+  },
+  {
+    "title": "22 Minutes",
+    "artists": [
+      "Andrew Prahlow"
+    ],
+    "is_explicit": false,
+    "duration": 29,
+    "genres": [],
+    "album": "Outer Wilds (Original Soundtrack)",
+    "year": "2019"
+  },
+  {
+    "title": "End Times",
+    "artists": [
+      "Andrew Prahlow"
+    ],
+    "is_explicit": false,
+    "duration": 119,
+    "genres": [],
+    "album": "Outer Wilds (Original Soundtrack)",
+    "year": "2019"
+  },
+  {
+    "title": "Space",
+    "artists": [
+      "Andrew Prahlow"
+    ],
+    "is_explicit": false,
+    "duration": 256,
+    "genres": [],
+    "album": "Outer Wilds (Original Soundtrack)",
+    "year": "2019"
+  },
+  {
+    "title": "Sweet Nothin'",
+    "artists": [
+      "Coletta"
+    ],
+    "is_explicit": false,
+    "duration": 235,
+    "genres": [],
+    "album": "Unknown Album",
+    "year": null
+  },
+  {
+    "title": "Blossom v2.0",
+    "artists": [
+      "Coletta"
+    ],
+    "is_explicit": false,
+    "duration": 200,
+    "genres": [],
+    "album": "Blossom v2.0",
+    "year": "2025"
+  },
+  {
+    "title": "AND I'M GONE",
+    "artists": [
+      "femtanyl"
+    ],
+    "is_explicit": true,
+    "duration": 167,
+    "genres": [],
+    "album": "AND I'M GONE",
+    "year": "2024"
+  },
+  {
+    "title": "ADDHERALL",
+    "artists": [
+      "FEM&M"
+    ],
+    "is_explicit": false,
+    "duration": 118,
+    "genres": [
+      "electronic",
+      "breakcore",
+      "dance-pop"
+    ],
+    "album": "ADDHERALL",
+    "year": "2025"
+  },
+  {
+    "title": "Beep Beep Bag",
+    "artists": [
+      "FEM&M"
+    ],
+    "is_explicit": false,
+    "duration": 133,
+    "genres": [
+      "electronic",
+      "digital hardcore",
+      "breakcore",
+      "hardcore techno",
+      "happy hardcore",
+      "hyperpop",
+      "hyper pop"
+    ],
+    "album": "Beep Beep Bag",
+    "year": null
+  },
+  {
+    "title": "Let's Go Gambling!",
+    "artists": [
+      "FEM&M"
+    ],
+    "is_explicit": false,
+    "duration": 148,
+    "genres": [
+      "electronic",
+      "breakcore",
+      "dance-pop"
+    ],
+    "album": "Let's Go Gambling!",
+    "year": "2024"
+  },
+  {
+    "title": "it boy",
+    "artists": [
+      "bbno$"
+    ],
+    "is_explicit": true,
+    "duration": 147,
+    "genres": [
+      "cloud rap",
+      "hip hop",
+      "pop rap",
+      "trap"
+    ],
+    "album": "it boy",
+    "year": "2024"
+  },
+  {
+    "title": "EYEBAGS!",
+    "artists": [
+      "ISSBROKIE & SUPXR"
+    ],
+    "is_explicit": true,
+    "duration": 133,
+    "genres": [],
+    "album": "EYEBAGS!",
+    "year": "2025"
+  },
+  {
+    "title": "mac breakcore",
+    "artists": [
+      "proloxx"
+    ],
+    "is_explicit": false,
+    "duration": 154,
+    "genres": [],
+    "album": "mac breakcore",
+    "year": "2022"
+  },
+  {
+    "title": "The Race Is About To Begin",
+    "artists": [
+      "black midi"
+    ],
+    "is_explicit": true,
+    "duration": 436,
+    "genres": [
+      "avant-prog",
+      "experimental rock",
+      "math rock",
+      "noise rock",
+      "post-punk",
+      "progressive rock"
+    ],
+    "album": "Hellfire",
+    "year": "2022"
+  },
+  {
+    "title": "GHOST",
+    "artists": [
+      "nelward"
+    ],
+    "is_explicit": false,
+    "duration": 159,
+    "genres": [
+      "alternative rock",
+      "weird"
+    ],
+    "album": "Unknown Album",
+    "year": null
+  },
+  {
+    "title": "Outer Wilds",
+    "artists": [
+      "Andrew Prahlow"
+    ],
+    "is_explicit": false,
+    "duration": 147,
+    "genres": [],
+    "album": "Outer Wilds (Original Soundtrack)",
+    "year": "2019"
+  },
+  {
+    "title": "Inside Out",
+    "artists": [
+      "Duster"
+    ],
+    "is_explicit": false,
+    "duration": 142,
+    "genres": [
+      "indie rock",
+      "shoegaze",
+      "slowcore"
+    ],
+    "album": "Stratosphere",
+    "year": "1998"
+  },
+  {
+    "title": "The Defence",
+    "artists": [
+      "black midi"
+    ],
+    "is_explicit": false,
+    "duration": 180,
+    "genres": [
+      "avant-prog",
+      "experimental rock",
+      "math rock",
+      "noise rock",
+      "post-punk",
+      "progressive rock"
+    ],
+    "album": "Hellfire",
+    "year": "2022"
+  },
+  {
+    "title": "Time to Dance",
+    "artists": [
+      "Panic! At The Disco"
+    ],
+    "is_explicit": false,
+    "duration": 203,
+    "genres": [
+      "alternative rock",
+      "baroque pop",
+      "chamber pop",
+      "electropop",
+      "emo",
+      "emo pop",
+      "group turned solo project",
+      "pop punk",
+      "pop rock",
+      "power pop"
+    ],
+    "album": "A Fever You Can't Sweat Out",
+    "year": "2005"
+  },
+  {
+    "title": "Tattoo",
+    "artists": [
+      "Coletta"
+    ],
+    "is_explicit": false,
+    "duration": 189,
+    "genres": [],
+    "album": "Tattoo",
+    "year": "2025"
+  },
+  {
+    "title": "Music Of Wellness (From Severance: Season 1 Apple TV+ Original Series Soundtrack)",
+    "artists": [
+      "Theodore Shapiro"
+    ],
+    "is_explicit": false,
+    "duration": 185,
+    "genres": [
+      "film composer"
+    ],
+    "album": "Music Of Wellness (From Severance: Season 1 Apple TV+ Original Series Soundtrack)",
+    "year": "2022"
+  },
+  {
+    "title": "Elevator Down",
+    "artists": [
+      "Theodore Shapiro"
+    ],
+    "is_explicit": false,
+    "duration": 172,
+    "genres": [
+      "film composer"
+    ],
+    "album": "Severance: Season 2 (Apple TV+ Original Series Soundtrack)",
+    "year": "2025"
+  },
+  {
+    "title": "The Ballad Of Ambrose and Gunnel (feat. Brooklyn United)",
+    "artists": [
+      "Theodore Shapiro"
+    ],
+    "is_explicit": false,
+    "duration": 268,
+    "genres": [
+      "film composer"
+    ],
+    "album": "Severance: Season 2 (Apple TV+ Original Series Soundtrack)",
+    "year": "2025"
+  },
+  {
+    "title": "A Cruel Angel's Thesis (Neon Genesis Evangelion Theme Rework)",
+    "artists": [
+      "Ginger Root"
+    ],
+    "is_explicit": false,
+    "duration": 236,
+    "genres": [
+      "analog funk",
+      "city pop",
+      "funk",
+      "indie pop",
+      "j-pop",
+      "soul"
+    ],
+    "album": "A Cruel Angel's Thesis (Neon Genesis Evangelion Theme Rework)",
+    "year": "2021"
+  },
+  {
+    "title": "mashcore usa",
+    "artists": [
+      "proloxx"
+    ],
+    "is_explicit": true,
+    "duration": 135,
+    "genres": [],
+    "album": "mashcore usa",
+    "year": "2023"
+  },
+  {
+    "title": "I'M UP NOW!",
+    "artists": [
+      "ISSBROKIE"
+    ],
+    "is_explicit": true,
+    "duration": 123,
+    "genres": [],
+    "album": "I'M UP NOW!",
+    "year": "2023"
+  },
+  {
+    "title": "\u3010\u6771\u65b9\u3011Bad Apple!! \uff30\uff36\u3010\u5f71\u7d75\u3011",
+    "artists": [
+      "kasidid2"
+    ],
+    "is_explicit": false,
+    "duration": 220,
+    "genres": [
+      "doujin",
+      "doujin circle",
+      "jazz",
+      "\u540c\u4eba",
+      "\u540c\u4eba\u30b5\u30fc\u30af\u30eb",
+      "\u6771\u65b9project"
+    ],
+    "album": "Unknown Album",
+    "year": null
+  },
+  {
+    "title": "Mtg Girl A (Young Girl A Funk Remix) - EmyyH",
+    "artists": [
+      "EmyyH"
+    ],
+    "is_explicit": false,
+    "duration": 242,
+    "genres": [
+      "vocal jazz"
+    ],
+    "album": "Unknown Album",
+    "year": null
+  },
+  {
+    "title": "Archangel",
+    "artists": [
+      "Amaranthe"
+    ],
+    "is_explicit": false,
+    "duration": 204,
+    "genres": [
+      "dance metal",
+      "electronic metal",
+      "female fronted",
+      "melodic death metal",
+      "melodic metalcore",
+      "metalcore",
+      "power metal",
+      "trance metal"
+    ],
+    "album": "Manifest",
+    "year": "2020"
+  },
+  {
+    "title": "It's Not All About You",
+    "artists": [
+      "Lawrence"
+    ],
+    "is_explicit": false,
+    "duration": 242,
+    "genres": [
+      "funk",
+      "pop-soul",
+      "r&b"
+    ],
+    "album": "Unknown Album",
+    "year": null
+  },
+  {
+    "title": "I Wish",
+    "artists": [
+      "Skee-Lo"
+    ],
+    "is_explicit": false,
+    "duration": 254,
+    "genres": [
+      "rap",
+      "hip hop",
+      "west coast hip hop",
+      "other rap hip-hop"
+    ],
+    "album": "Unknown Album",
+    "year": null
+  },
+  {
+    "title": "Let's Go",
+    "artists": [
+      "Stuck in the Sound"
+    ],
+    "is_explicit": false,
+    "duration": 215,
+    "genres": [
+      "rock",
+      "pop",
+      "indie rock",
+      "indie",
+      "alternative",
+      "indie pop"
+    ],
+    "album": "Unknown Album",
+    "year": null
+  },
+  {
+    "title": "Cha Cha",
+    "artists": [
+      "Freddie Dredd"
+    ],
+    "is_explicit": false,
+    "duration": 209,
+    "genres": [
+      "hip hop",
+      "horrorcore",
+      "phonk",
+      "trap"
+    ],
+    "album": "Unknown Album",
+    "year": null
+  },
+  {
+    "title": "I was in hell, looking at heaven.",
+    "artists": [
+      "cannotHear63"
+    ],
+    "is_explicit": false,
+    "duration": 158,
+    "genres": [],
+    "album": "Unknown Album",
+    "year": null
+  },
+  {
+    "title": "Linus And Lucy",
+    "artists": [
+      "Vince Guaraldi Trio"
+    ],
+    "is_explicit": false,
+    "duration": 186,
+    "genres": [
+      "jazz"
+    ],
+    "album": "A Charlie Brown Christmas [2012 Remastered & Expanded Edition]",
+    "year": "2012"
+  },
+  {
+    "title": "The Only Difference Between Martyrdom and Suicide Is Press Coverage",
+    "artists": [
+      "Panic! At The Disco"
+    ],
+    "is_explicit": false,
+    "duration": 175,
+    "genres": [
+      "alternative rock",
+      "baroque pop",
+      "chamber pop",
+      "electropop",
+      "emo",
+      "emo pop",
+      "group turned solo project",
+      "pop punk",
+      "pop rock",
+      "power pop"
+    ],
+    "album": "A Fever You Can't Sweat Out",
+    "year": "2005"
+  },
+  {
+    "title": "Nomu",
+    "artists": [
+      "Good Kid"
+    ],
+    "is_explicit": false,
+    "duration": 170,
+    "genres": [
+      "indie pop",
+      "indie rock"
+    ],
+    "album": "Nomu",
+    "year": "2015"
+  },
+  {
+    "title": "Mr. Capgras Encounters a Secondhand Vanity: Tulpamancer's Prosopagnosia / Pareidolia (As Direct Result of Trauma to Fusiform Gyrus)",
+    "artists": [
+      "Will Wood and the Tapeworms"
+    ],
+    "is_explicit": false,
+    "duration": 224,
+    "genres": [],
+    "album": "SELF-iSH",
+    "year": "2016"
+  },
+  {
+    "title": "BOTTLE IT UP!",
+    "artists": [
+      "ISSBROKIE"
+    ],
+    "is_explicit": true,
+    "duration": 172,
+    "genres": [],
+    "album": "BOTTLE IT UP!",
+    "year": "2023"
+  },
+  {
+    "title": "nightcoringearly2000ssongsthatmakemethinkofyou.",
+    "artists": [
+      "ISSBROKIE"
+    ],
+    "is_explicit": true,
+    "duration": 188,
+    "genres": [],
+    "album": "fuck.",
+    "year": null
+  },
+  {
+    "title": "Victorious",
+    "artists": [
+      "Panic! At The Disco"
+    ],
+    "is_explicit": false,
+    "duration": 179,
+    "genres": [
+      "rock",
+      "punk",
+      "indie",
+      "indie pop",
+      "alternative rock/pop punk"
+    ],
+    "album": "Death of a Bachelor",
+    "year": "2016"
+  },
+  {
+    "title": "The Ballad of Mona Lisa",
+    "artists": [
+      "Panic! At The Disco"
+    ],
+    "is_explicit": false,
+    "duration": 227,
+    "genres": [
+      "alternative rock",
+      "baroque pop",
+      "chamber pop",
+      "electropop",
+      "emo",
+      "emo pop",
+      "group turned solo project",
+      "pop punk",
+      "pop rock",
+      "power pop"
+    ],
+    "album": "Vices & Virtues",
+    "year": "2011"
+  },
+  {
+    "title": "THE BADDEST (BADDER) (feat. Ayesha Erotica)",
+    "artists": [
+      "Joey Valence & Brae"
+    ],
+    "is_explicit": true,
+    "duration": 144,
+    "genres": [
+      "boom bap"
+    ],
+    "album": "THE BADDEST (BADDER)",
+    "year": "2024"
+  },
+  {
+    "title": "Thought I Was Dead (feat. ScHoolboy Q & Santigold)",
+    "artists": [
+      "Tyler, The Creator"
+    ],
+    "is_explicit": true,
+    "duration": 208,
+    "genres": [
+      "hardcore hip hop",
+      "hip hop",
+      "horrorcore",
+      "west coast hip hop"
+    ],
+    "album": "CHROMAKOPIA",
+    "year": "2024"
+  },
+  {
+    "title": "PUNK TACTICS",
+    "artists": [
+      "Joey Valence & Brae"
+    ],
+    "is_explicit": false,
+    "duration": 144,
+    "genres": [
+      "rap"
+    ],
+    "album": "PUNK TACTICS",
+    "year": "2023"
+  },
+  {
+    "title": "THOUGHT HE WUZ",
+    "artists": [
+      "GODHANDUSA"
+    ],
+    "is_explicit": true,
+    "duration": 138,
+    "genres": [],
+    "album": "THOUGHT HE WUZ",
+    "year": "2024"
+  },
+  {
+    "title": "where's my head at _",
+    "artists": [
+      "Basement Jaxx",
+      "100 gecs"
+    ],
+    "is_explicit": false,
+    "duration": 153,
+    "genres": [
+      "trance",
+      "big beat",
+      "electronica",
+      "00s",
+      "soundtrack_punk_punk_soundtrack"
+    ],
+    "album": "where's my head at _",
+    "year": "2023"
+  },
+  {
+    "title": "HOOLIGANG",
+    "artists": [
+      "Joey Valence & Brae"
+    ],
+    "is_explicit": false,
+    "duration": 168,
+    "genres": [
+      "rap"
+    ],
+    "album": "PUNK TACTICS",
+    "year": "2023"
+  },
+  {
+    "title": "HOP OFF THE PORCH",
+    "artists": [
+      "GODHANDUSA"
+    ],
+    "is_explicit": true,
+    "duration": 182,
+    "genres": [],
+    "album": "GODHAND VOLUME 2",
+    "year": "2025"
+  },
+  {
+    "title": "HOW YOU AIN'T GOT NO GUN?",
+    "artists": [
+      "GODHANDUSA"
+    ],
+    "is_explicit": true,
+    "duration": 138,
+    "genres": [],
+    "album": "GODHAND VOLUME 2",
+    "year": "2025"
+  },
+  {
+    "title": "She Blinded Me With Science",
+    "artists": [
+      "Thomas Dolby"
+    ],
+    "is_explicit": false,
+    "duration": 222,
+    "genres": [
+      "80s synthpop",
+      "art pop",
+      "british",
+      "english",
+      "film score",
+      "new wave",
+      "pop rock",
+      "rock and indie",
+      "sophisti-pop",
+      "synth-pop",
+      "synthpop",
+      "uk"
+    ],
+    "album": "The Golden Age of Wireless",
+    "year": "1982"
+  },
+  {
+    "title": "(Don't Fear) The Reaper",
+    "artists": [
+      "Blue Oyster Cult"
+    ],
+    "is_explicit": false,
+    "duration": 309,
+    "genres": [
+      "rock",
+      "heavy metal",
+      "hard rock",
+      "techno",
+      "psychedelic rock",
+      "covered by 7",
+      "classic rock",
+      "album rock",
+      "arena rock",
+      "classic hard rock",
+      "dr12",
+      "clipping",
+      "pop/rock"
+    ],
+    "album": "Agents Of Fortune",
+    "year": "1976"
+  },
+  {
+    "title": "21st Century Schizoid Man (Including \"Mirrors\")",
+    "artists": [
+      "King Crimson"
+    ],
+    "is_explicit": false,
+    "duration": 443,
+    "genres": [
+      "art rock",
+      "british",
+      "english",
+      "experimental rock",
+      "free improvisation",
+      "jazz fusion",
+      "post-progressive",
+      "progressive",
+      "progressive rock",
+      "rock",
+      "symphonic prog",
+      "symphonic rock"
+    ],
+    "album": "In The Court Of The Crimson King (Expanded & Remastered Original Album Mix)",
+    "year": "1969"
+  },
+  {
+    "title": "Handbook for the Recently Deceased",
+    "artists": [
+      "Coletta"
+    ],
+    "is_explicit": false,
+    "duration": 264,
+    "genres": [],
+    "album": "Mind & Time",
+    "year": "2018"
+  },
+  {
+    "title": "Fallen Down (Undertale Soundtrack)",
+    "artists": [
+      "Lizard in the Spring"
+    ],
+    "is_explicit": false,
+    "duration": 120,
+    "genres": [],
+    "album": "Fallen Down (Undertale Soundtrack)",
+    "year": "2022"
+  },
+  {
+    "title": "A Quick One Before the Eternal Worm Devours Appalachia",
+    "artists": [
+      "Lizard in the Spring"
+    ],
+    "is_explicit": false,
+    "duration": 323,
+    "genres": [],
+    "album": "A Quick One Before the Eternal Worm Devours Appalachia",
+    "year": "2022"
+  },
+  {
+    "title": "The Great Soul Destroyer",
+    "artists": [
+      "I Monster"
+    ],
+    "is_explicit": false,
+    "duration": 280,
+    "genres": [
+      "downtempo",
+      "electro",
+      "electronic",
+      "electronica",
+      "electropop",
+      "hauntology",
+      "neo-psychedelia",
+      "sampledelia",
+      "sheffield",
+      "synth-pop",
+      "trip hop"
+    ],
+    "album": "Rare",
+    "year": "2012"
+  },
+  {
+    "title": "Midnight In Tokyo",
+    "artists": [
+      "Giulio Cercato"
+    ],
+    "is_explicit": false,
+    "duration": 190,
+    "genres": [],
+    "album": "Midnight In Tokyo",
+    "year": "2023"
+  },
+  {
+    "title": "Dear John (Single Edit)",
+    "artists": [
+      "I Monster"
+    ],
+    "is_explicit": false,
+    "duration": 143,
+    "genres": [
+      "downtempo",
+      "electro",
+      "electronic",
+      "electronica",
+      "electropop",
+      "hauntology",
+      "neo-psychedelia",
+      "sampledelia",
+      "sheffield",
+      "synth-pop",
+      "trip hop"
+    ],
+    "album": "Dear John EP",
+    "year": "2009"
+  },
+  {
+    "title": "Lust for a Vampyr (Scandinavian Pop Tarts Mix)",
+    "artists": [
+      "I Monster"
+    ],
+    "is_explicit": false,
+    "duration": 272,
+    "genres": [
+      "downtempo",
+      "electro",
+      "electronic",
+      "electronica",
+      "electropop",
+      "hauntology",
+      "neo-psychedelia",
+      "sampledelia",
+      "sheffield",
+      "synth-pop",
+      "trip hop"
+    ],
+    "album": "Lust for a Vampyr Part 1",
+    "year": "2009"
+  },
+  {
+    "title": "Electric Feel",
+    "artists": [
+      "MGMT"
+    ],
+    "is_explicit": false,
+    "duration": 230,
+    "genres": [
+      "hypnagogic pop",
+      "indie pop",
+      "indie rock",
+      "indietronica",
+      "neo-psychedelia",
+      "new wave",
+      "psychedelic pop",
+      "psychedelic rock",
+      "synth-pop",
+      "usa"
+    ],
+    "album": "Oracular Spectacular",
+    "year": "2007"
+  },
+  {
+    "title": "Charlie 2 (The Money Grab)",
+    "artists": [
+      "That Handsome Devil"
+    ],
+    "is_explicit": false,
+    "duration": 216,
+    "genres": [
+      "alternative rock",
+      "experimental rock",
+      "funk",
+      "jazz",
+      "rock"
+    ],
+    "album": "Charlie 2 (The Money Grab)",
+    "year": "2025"
+  },
+  {
+    "title": "PIN-EYE",
+    "artists": [
+      "Jhariah"
+    ],
+    "is_explicit": false,
+    "duration": 273,
+    "genres": [],
+    "album": "PIN-EYE",
+    "year": "2024"
+  },
+  {
+    "title": "Teenagers",
+    "artists": [
+      "My Chemical Romance"
+    ],
+    "is_explicit": true,
+    "duration": 162,
+    "genres": [
+      "alternative",
+      "alternative rock",
+      "emo",
+      "emo pop",
+      "hard rock",
+      "indie rock",
+      "pop punk",
+      "post-hardcore",
+      "post-punk revival",
+      "power pop",
+      "punk rock",
+      "rock",
+      "rock opera"
+    ],
+    "album": "The Black Parade",
+    "year": "2006"
+  },
+  {
+    "title": "Check Yes, Juliet",
+    "artists": [
+      "We The Kings"
+    ],
+    "is_explicit": false,
+    "duration": 221,
+    "genres": [
+      "alternative rock",
+      "emo pop",
+      "neon pop punk",
+      "pop",
+      "pop punk",
+      "pop rock",
+      "power pop",
+      "rock"
+    ],
+    "album": "We The Kings",
+    "year": "2007"
+  },
+  {
+    "title": "Second Rate Town (Acoustic)",
+    "artists": [
+      "Good Kid"
+    ],
+    "is_explicit": false,
+    "duration": 158,
+    "genres": [
+      "indie pop",
+      "indie rock"
+    ],
+    "album": "Acoustic Kid",
+    "year": "2024"
+  },
+  {
+    "title": "Main Titles",
+    "artists": [
+      "Theodore Shapiro"
+    ],
+    "is_explicit": false,
+    "duration": 81,
+    "genres": [
+      "film composer"
+    ],
+    "album": "Severance: Season 1 (Apple TV+ Original Series Soundtrack)",
+    "year": "2022"
+  },
+  {
+    "title": "Cabinet Man",
+    "artists": [
+      "Lemon Demon"
+    ],
+    "is_explicit": false,
+    "duration": 263,
+    "genres": [
+      "new wave",
+      "rock"
+    ],
+    "album": "Spirit Phone",
+    "year": "2016"
+  },
+  {
+    "title": "As if Waltz",
+    "artists": [
+      "Geordie Greep"
+    ],
+    "is_explicit": true,
+    "duration": 474,
+    "genres": [
+      "rock",
+      "art rock",
+      "avant-garde"
+    ],
+    "album": "The New Sound",
+    "year": "2024"
+  },
+  {
+    "title": "Butterflies",
+    "artists": [
+      "Coletta"
+    ],
+    "is_explicit": false,
+    "duration": 193,
+    "genres": [],
+    "album": "Idealism",
+    "year": "2020"
+  },
+  {
+    "title": "I\u2019m The President",
+    "artists": [
+      "KNOWER"
+    ],
+    "is_explicit": true,
+    "duration": 247,
+    "genres": [
+      "electronic",
+      "electropop",
+      "experimental"
+    ],
+    "album": "KNOWER FOREVER",
+    "year": "2023"
+  },
+  {
+    "title": "American Boy (feat. Kanye West)",
+    "artists": [
+      "Estelle"
+    ],
+    "is_explicit": true,
+    "duration": 285,
+    "genres": [],
+    "album": "Shine",
+    "year": "2008"
+  },
+  {
+    "title": "I Spider",
+    "artists": [
+      "I Monster"
+    ],
+    "is_explicit": false,
+    "duration": 158,
+    "genres": [],
+    "album": "Rare",
+    "year": "2012"
+  },
+  {
+    "title": "Ulterior Motives",
+    "artists": [
+      "MistyRockandRoll"
+    ],
+    "is_explicit": false,
+    "duration": 195,
+    "genres": [],
+    "album": "Ulterior Motives",
+    "year": "2024"
+  },
+  {
+    "title": "I Miss Ya So",
+    "artists": [
+      "\uae40\ubc18\uc7a5\uacfc \uc708\ub514\uc2dc\ud2f0"
+    ],
+    "is_explicit": false,
+    "duration": 309,
+    "genres": [
+      "reggae"
+    ],
+    "album": "Love Record",
+    "year": "2005"
+  },
+  {
+    "title": "The Middle",
+    "artists": [
+      "Jimmy Eat World"
+    ],
+    "is_explicit": false,
+    "duration": 166,
+    "genres": [
+      "2008 universal fire victim",
+      "alternative rock",
+      "emo",
+      "emo pop",
+      "emo-pop",
+      "indie rock",
+      "pop punk",
+      "pop rock",
+      "power pop",
+      "powerpop",
+      "usa"
+    ],
+    "album": "Bleed American",
+    "year": "2001"
+  },
+  {
+    "title": "Chelsea Dagger",
+    "artists": [
+      "The Fratellis"
+    ],
+    "is_explicit": false,
+    "duration": 216,
+    "genres": [
+      "alternative rock",
+      "british",
+      "garage rock",
+      "indie pop",
+      "indie rock",
+      "pop",
+      "pop and chart",
+      "post-punk revival",
+      "rock",
+      "scottish",
+      "uk"
+    ],
+    "album": "Costello Music",
+    "year": "2006"
+  },
+  {
+    "title": "Daft Punk-Get Lucky cover (Electronic vs. Live Instruments) by KNOWER",
+    "artists": [
+      "KNOWER"
+    ],
+    "is_explicit": false,
+    "duration": 198,
+    "genres": [
+      "electronic",
+      "electropop",
+      "experimental"
+    ],
+    "album": "Unknown Album",
+    "year": null
+  },
+  {
+    "title": "Flash Me Back",
+    "artists": [
+      "Camellia"
+    ],
+    "is_explicit": false,
+    "duration": 328,
+    "genres": [
+      "edm",
+      "j-core",
+      "trance",
+      "uk hardcore"
+    ],
+    "album": "Unknown Album",
+    "year": null
+  },
+  {
+    "title": "9MM (KURT COBAIN)",
+    "artists": [
+      "GODHANDUSA"
+    ],
+    "is_explicit": true,
+    "duration": 148,
+    "genres": [],
+    "album": "9MM (KURT COBAIN)",
+    "year": "2024"
+  },
+  {
+    "title": "Daydream in Blue (BBC Radio 2 Session)",
+    "artists": [
+      "I Monster"
+    ],
+    "is_explicit": false,
+    "duration": 239,
+    "genres": [
+      "downtempo",
+      "electro",
+      "electronic",
+      "electronica",
+      "electropop",
+      "hauntology",
+      "neo-psychedelia",
+      "sampledelia",
+      "sheffield",
+      "synth-pop",
+      "trip hop"
+    ],
+    "album": "Dear John EP",
+    "year": "2009"
+  },
+  {
+    "title": "Who Is She ?",
+    "artists": [
+      "I Monster"
+    ],
+    "is_explicit": false,
+    "duration": 214,
+    "genres": [
+      "downtempo",
+      "electro",
+      "electronic",
+      "electronica",
+      "electropop",
+      "hauntology",
+      "neo-psychedelia",
+      "sampledelia",
+      "sheffield",
+      "synth-pop",
+      "trip hop"
+    ],
+    "album": "Neveroddoreven",
+    "year": "2005"
+  },
+  {
+    "title": "Lust for a Vampyr",
+    "artists": [
+      "I Monster"
+    ],
+    "is_explicit": false,
+    "duration": 274,
+    "genres": [
+      "downtempo",
+      "electro",
+      "electronic",
+      "electronica",
+      "electropop",
+      "hauntology",
+      "neo-psychedelia",
+      "sampledelia",
+      "sheffield",
+      "synth-pop",
+      "trip hop"
+    ],
+    "album": "A Dense Swarm of Ancient Stars",
+    "year": "2009"
+  },
+  {
+    "title": "Glory Box",
+    "artists": [
+      "Portishead"
+    ],
+    "is_explicit": false,
+    "duration": 309,
+    "genres": [
+      "alternative rock",
+      "british",
+      "downtempo",
+      "electronic",
+      "experimental rock",
+      "folktronica",
+      "trip hop",
+      "trip-hop"
+    ],
+    "album": "Dummy",
+    "year": "1994"
+  },
+  {
+    "title": "Lemonade Soda",
+    "artists": [
+      "Coletta"
+    ],
+    "is_explicit": false,
+    "duration": 307,
+    "genres": [],
+    "album": "Mind & Time",
+    "year": "2018"
+  },
+  {
+    "title": "Blossom",
+    "artists": [
+      "Coletta"
+    ],
+    "is_explicit": false,
+    "duration": 222,
+    "genres": [],
+    "album": "Mind & Time",
+    "year": "2018"
+  },
+  {
+    "title": "Flower Child",
+    "artists": [
+      "Coletta"
+    ],
+    "is_explicit": false,
+    "duration": 259,
+    "genres": [],
+    "album": "Mind & Time",
+    "year": "2018"
+  },
+  {
+    "title": "So Long & Thanks For All The Fish (Soundtrack)",
+    "artists": [
+      "Hilary Summers",
+      "Kemi Ominiyi",
+      "The R'SVP Voices"
+    ],
+    "is_explicit": false,
+    "duration": 147,
+    "genres": [
+      "soundtrack",
+      "score",
+      "movie soundtrack"
+    ],
+    "album": "The Hitchhiker's Guide To The Galaxy",
+    "year": "2005"
+  },
+  {
+    "title": "SWAGGERHAVERZ!",
+    "artists": [
+      "ISSBROKIE & Jarv"
+    ],
+    "is_explicit": true,
+    "duration": 136,
+    "genres": [],
+    "album": "SWAGGERHAVERZ!",
+    "year": "2025"
+  },
+  {
+    "title": "Smooth Operator (Single Version)",
+    "artists": [
+      "Sade"
+    ],
+    "is_explicit": false,
+    "duration": 259,
+    "genres": [
+      "am",
+      "contemporary r&b",
+      "downtempo",
+      "female singer",
+      "jazz",
+      "jazz pop",
+      "pop",
+      "pop soul",
+      "quiet storm",
+      "smooth jazz",
+      "smooth soul",
+      "sophisti-pop",
+      "soul",
+      "trip hop"
+    ],
+    "album": "The Best of Sade",
+    "year": "1994"
+  },
+  {
+    "title": "Great Pumpkin Waltz",
+    "artists": [
+      "Vince Guaraldi"
+    ],
+    "is_explicit": false,
+    "duration": 217,
+    "genres": [
+      "christmas music",
+      "cool jazz",
+      "halloween music",
+      "jazz",
+      "jazz pop",
+      "television music"
+    ],
+    "album": "Oh Good Grief",
+    "year": "1968"
+  },
+  {
+    "title": "King Bozzi",
+    "artists": [
+      "Cory Wong",
+      "Metropole Orkest",
+      "Sam Greenfield"
+    ],
+    "is_explicit": false,
+    "duration": 278,
+    "genres": [
+      "funk",
+      "guitar",
+      "jazz",
+      "r&b",
+      "smooth jazz"
+    ],
+    "album": "King Bozzi",
+    "year": "2024"
+  },
+  {
+    "title": "Animal Spirits",
+    "artists": [
+      "Vulfpeck"
+    ],
+    "is_explicit": false,
+    "duration": 191,
+    "genres": [
+      "funk",
+      "indie",
+      "indie pop"
+    ],
+    "album": "The Beautiful Game",
+    "year": "2016"
+  },
+  {
+    "title": "THEME FROM LUPIN \u2162",
+    "artists": [
+      "Yuji Ohno & Lupintic Five with Friends"
+    ],
+    "is_explicit": false,
+    "duration": 235,
+    "genres": [],
+    "album": "SEVEN DAYS RHAPSODY",
+    "year": "2006"
+  },
+  {
+    "title": "The Archives Resurrected",
+    "artists": [
+      "Sam Jones"
+    ],
+    "is_explicit": false,
+    "duration": 297,
+    "genres": [],
+    "album": "The Archives Resurrected",
+    "year": "2025"
+  },
+  {
+    "title": "The Magnus Archives (Original Theme) (feat. Elliot Corner)",
+    "artists": [
+      "Sam Jones"
+    ],
+    "is_explicit": false,
+    "duration": 72,
+    "genres": [],
+    "album": "The Magnus Archives (Original Theme)",
+    "year": "2022"
+  },
+  {
+    "title": "bmbmbm",
+    "artists": [
+      "black midi"
+    ],
+    "is_explicit": false,
+    "duration": 297,
+    "genres": [
+      "avant-prog",
+      "experimental rock",
+      "math rock",
+      "noise rock",
+      "post-punk",
+      "progressive rock"
+    ],
+    "album": "Schlagenheim",
+    "year": "2019"
+  },
+  {
+    "title": "Lover Girl",
+    "artists": [
+      "Laufey"
+    ],
+    "is_explicit": false,
+    "duration": 165,
+    "genres": [
+      "bossa nova",
+      "easy listening",
+      "jazz",
+      "jazz pop",
+      "pop",
+      "singer-songwriter",
+      "vocal jazz"
+    ],
+    "album": "Lover Girl",
+    "year": "2025"
+  },
+  {
+    "title": "Kiss Me, Son of God",
+    "artists": [
+      "They Might Be Giants"
+    ],
+    "is_explicit": false,
+    "duration": 113,
+    "genres": [
+      "alternative rock",
+      "art pop",
+      "avant-garde pop",
+      "children's music",
+      "college rock",
+      "geek rock",
+      "indie pop",
+      "minimal wave",
+      "new wave",
+      "pop punk",
+      "pop rock",
+      "post-punk",
+      "power pop",
+      "rock",
+      "television music",
+      "usa"
+    ],
+    "album": "Lincoln",
+    "year": "1988"
+  },
+  {
+    "title": "Newspapers for Magicians",
+    "artists": [
+      "Camellia"
+    ],
+    "is_explicit": false,
+    "duration": 293,
+    "genres": [
+      "edm",
+      "j-core",
+      "trance",
+      "uk hardcore"
+    ],
+    "album": "60+3+10k",
+    "year": "2021"
+  },
+  {
+    "title": "Rule #18 - Lion",
+    "artists": [
+      "Fish in a Birdcage"
+    ],
+    "is_explicit": false,
+    "duration": 178,
+    "genres": [],
+    "album": "Waterfall",
+    "year": "2020"
+  },
+  {
+    "title": "Rule #15 - Four Aces",
+    "artists": [
+      "Fish in a Birdcage"
+    ],
+    "is_explicit": false,
+    "duration": 236,
+    "genres": [],
+    "album": "Waterfall",
+    "year": "2020"
+  },
+  {
+    "title": "Screw // Owo // Screw (Lowong Version)",
+    "artists": [
+      "Camellia"
+    ],
+    "is_explicit": false,
+    "duration": 267,
+    "genres": [
+      "twerk",
+      "hybrid trap"
+    ],
+    "album": "Ashed Wings",
+    "year": "2023"
+  },
+  {
+    "title": "134340 Pluto",
+    "artists": [
+      "Cojum Dip"
+    ],
+    "is_explicit": false,
+    "duration": 223,
+    "genres": [
+      "avant-garde",
+      "jazz",
+      "metal",
+      "rock"
+    ],
+    "album": "Cojum Dip",
+    "year": "2019"
+  },
+  {
+    "title": "Leave Me Alone",
+    "artists": [
+      "I DONT KNOW HOW BUT THEY FOUND ME"
+    ],
+    "is_explicit": false,
+    "duration": 216,
+    "genres": [
+      "alternative",
+      "alternative rock",
+      "dance-rock",
+      "indie pop",
+      "new wave",
+      "pop rock",
+      "rock",
+      "synth-pop"
+    ],
+    "album": "RAZZMATAZZ",
+    "year": "2020"
+  },
+  {
+    "title": "Cotard's Solution (Anatta, Dukkha, Anicca)",
+    "artists": [
+      "Will Wood and the Tapeworms"
+    ],
+    "is_explicit": true,
+    "duration": 306,
+    "genres": [],
+    "album": "SELF-iSH",
+    "year": "2016"
+  },
+  {
+    "title": "Louder Than Words",
+    "artists": [
+      "Ra\u00fal Esparza",
+      "Jerry Dixon",
+      "Amy Spanger"
+    ],
+    "is_explicit": false,
+    "duration": 285,
+    "genres": [],
+    "album": "tick, tick...BOOM! (Original Off-Broadway Cast Recording)",
+    "year": "1990"
+  },
+  {
+    "title": "Frontier Psychiatrist",
+    "artists": [
+      "The Avalanches"
+    ],
+    "is_explicit": false,
+    "duration": 288,
+    "genres": [
+      "big beat",
+      "breakbeat",
+      "downtempo",
+      "electronic",
+      "experimental",
+      "experimental hip hop",
+      "hip hop",
+      "mashup",
+      "neo-psychedelia",
+      "nu-disco",
+      "plunderphonics",
+      "sampledelia",
+      "turntablism"
+    ],
+    "album": "Since I Left You (20th Anniversary Deluxe Edition)",
+    "year": "2000"
+  },
+  {
+    "title": "Come to Your Senses",
+    "artists": [
+      "Jazmine Sullivan"
+    ],
+    "is_explicit": false,
+    "duration": 241,
+    "genres": [
+      "contemporary r&b",
+      "hip hop rnb and dance hall",
+      "soul"
+    ],
+    "album": "Unknown Album",
+    "year": null
+  },
+  {
+    "title": "30/90",
+    "artists": [
+      "Robin de Jes\u00fas, Michaela Ja\u00e9, Alexandra Shipp, Vanessa Hudgens, Joshua Henry, and Andrew Garfield"
+    ],
+    "is_explicit": false,
+    "duration": 263,
+    "genres": [],
+    "album": "Unknown Album",
+    "year": null
+  },
+  {
+    "title": "Everything You Do",
+    "artists": [
+      "The Happy Fits"
+    ],
+    "is_explicit": false,
+    "duration": 213,
+    "genres": [],
+    "album": "Everything You Do",
+    "year": "2025"
+  },
+  {
+    "title": "Whisper to a Scream (Birds Fly) (Single Version)",
+    "artists": [
+      "The Icicle Works"
+    ],
+    "is_explicit": false,
+    "duration": 229,
+    "genres": [
+      "classic pop and rock"
+    ],
+    "album": "Dance Vault Mixes - Whisper To A Scream (Birds Fly)",
+    "year": "2006"
+  },
+  {
+    "title": "Rule #4 - Fish in a Birdcage",
+    "artists": [
+      "Fish in a Birdcage"
+    ],
+    "is_explicit": false,
+    "duration": 181,
+    "genres": [
+      "self-titled",
+      "x by x on x"
+    ],
+    "album": "Fish in a Birdcage",
+    "year": "2014"
+  },
+  {
+    "title": "WEAK ASS MC THERAPY SESSION! (interlude)",
+    "artists": [
+      "ISSBROKIE"
+    ],
+    "is_explicit": true,
+    "duration": 122,
+    "genres": [],
+    "album": "BOMINATION!",
+    "year": "2025"
+  },
+  {
+    "title": "With Friends Like These",
+    "artists": [
+      "Nuke Plant Chickens"
+    ],
+    "is_explicit": false,
+    "duration": 387,
+    "genres": [
+      "rock"
+    ],
+    "album": "Sweet Nectarine and Bay Leaf",
+    "year": "2024"
+  },
+  {
+    "title": "Certain Birds",
+    "artists": [
+      "Fish in a Birdcage",
+      "Shayfer James",
+      "Sparkbird"
+    ],
+    "is_explicit": false,
+    "duration": 238,
+    "genres": [],
+    "album": "Certain Birds",
+    "year": "2025"
+  },
+  {
+    "title": "Runaway Baby",
+    "artists": [
+      "Bruno Mars"
+    ],
+    "is_explicit": false,
+    "duration": 149,
+    "genres": [
+      "chinese",
+      "contemporary r&b",
+      "mandopop",
+      "pop",
+      "pop soul",
+      "rock",
+      "singer-songwriter",
+      "taiwanese"
+    ],
+    "album": "Doo-Wops & Hooligans",
+    "year": "2010"
+  },
+  {
+    "title": "HYPERCLOCKED",
+    "artists": [
+      "Schwank"
+    ],
+    "is_explicit": false,
+    "duration": 158,
+    "genres": [],
+    "album": "HYPERCLOCKED",
+    "year": "2023"
+  },
+  {
+    "title": "Contraption/Soul Desert",
+    "artists": [
+      "Thee Oh Sees"
+    ],
+    "is_explicit": false,
+    "duration": 322,
+    "genres": [
+      "alternative rock",
+      "art rock",
+      "garage psych",
+      "garage punk",
+      "garage rock",
+      "heavy psych",
+      "neo-psychedelia",
+      "noise rock",
+      "post-punk",
+      "psychedelic rock",
+      "punk rock"
+    ],
+    "album": "Carrion Crawler / The Dream",
+    "year": "2011"
+  },
+  {
+    "title": "SEEIN\u2019 STARS",
+    "artists": [
+      "Turnstile"
+    ],
+    "is_explicit": false,
+    "duration": 187,
+    "genres": [
+      "groovy",
+      "hardcore punk",
+      "punk"
+    ],
+    "album": "NEVER ENOUGH",
+    "year": "2025"
+  },
+  {
+    "title": "DON\u2019T MAKE ME LAUGH! (feat. ISSBROKIE)",
+    "artists": [
+      "KARMAM\u00d8B"
+    ],
+    "is_explicit": true,
+    "duration": 109,
+    "genres": [
+      "french"
+    ],
+    "album": "DON\u2019T MAKE ME LAUGH!",
+    "year": "2022"
+  },
+  {
+    "title": "Don't You Worry Baby (feat. Madison McFerrin)",
+    "artists": [
+      "Tyler, The Creator"
+    ],
+    "is_explicit": true,
+    "duration": 179,
+    "genres": [
+      "hardcore hip hop",
+      "hip hop",
+      "horrorcore",
+      "west coast hip hop"
+    ],
+    "album": "DON'T TAP THE GLASS",
+    "year": "2025"
+  },
+  {
+    "title": "Minor Setback (Official Video)",
+    "artists": [
+      "GUM feat. Ambrose Kenny-Smith"
+    ],
+    "is_explicit": false,
+    "duration": 231,
+    "genres": [
+      "alternative",
+      "electronic",
+      "rock"
+    ],
+    "album": "Unknown Album",
+    "year": null
+  },
+  {
+    "title": "WE'RE GONNA WIN - An I'm Gonna Win/All of my Friends Combination Cover",
+    "artists": [
+      "Chonny Jash"
+    ],
+    "is_explicit": false,
+    "duration": 203,
+    "genres": [],
+    "album": "Unknown Album",
+    "year": null
+  },
+  {
+    "title": "IF YOU WANT IT BAD ENOUGH",
+    "artists": [
+      "GODHANDUSA"
+    ],
+    "is_explicit": true,
+    "duration": 222,
+    "genres": [
+      "thailand"
+    ],
+    "album": "GODHAND VOLUME 2: THE WORLD IS A LIVING HELL",
+    "year": "2025"
+  },
+  {
+    "title": "YOU KNOW HOW IT GO",
+    "artists": [
+      "GODHANDUSA"
+    ],
+    "is_explicit": true,
+    "duration": 173,
+    "genres": [],
+    "album": "GODHAND VOLUME 2",
+    "year": "2025"
+  },
+  {
+    "title": "I SELL CRACK!",
+    "artists": [
+      "ISSBROKIE"
+    ],
+    "is_explicit": true,
+    "duration": 96,
+    "genres": [],
+    "album": "I SELL CRACK!",
+    "year": "2024"
+  },
+  {
+    "title": "Killing Time",
+    "artists": [
+      "Magdalena Bay"
+    ],
+    "is_explicit": false,
+    "duration": 234,
+    "genres": [
+      "rock",
+      "electronic",
+      "pop",
+      "synth-pop",
+      "disco",
+      "indie pop",
+      "soft rock",
+      "dance-pop",
+      "pop rock",
+      "europop",
+      "neo-psychedelia"
+    ],
+    "album": "Imaginal Disk",
+    "year": "2024"
+  },
+  {
+    "title": "WEIGHTLESS!",
+    "artists": [
+      "femtanyl"
+    ],
+    "is_explicit": true,
+    "duration": 145,
+    "genres": [
+      "breakcore",
+      "digital hardcore",
+      "furry",
+      "webcore"
+    ],
+    "album": "WEIGHTLESS!",
+    "year": "2024"
+  },
+  {
+    "title": "Super Smash Bros.",
+    "artists": [
+      "Yung Gravy",
+      "bbno$",
+      "BABY GRAVY"
+    ],
+    "is_explicit": true,
+    "duration": 154,
+    "genres": [],
+    "album": "Baby Gravy 3",
+    "year": "2023"
+  },
+  {
+    "title": "Bang Bang (feat. Adam Levine)",
+    "artists": [
+      "K'NAAN"
+    ],
+    "is_explicit": true,
+    "duration": 187,
+    "genres": [
+      "hip hop"
+    ],
+    "album": "Troubadour",
+    "year": "2008"
+  },
+  {
+    "title": "Death of a Bachelor",
+    "artists": [
+      "Panic! At The Disco"
+    ],
+    "is_explicit": false,
+    "duration": 204,
+    "genres": [
+      "alternative rock",
+      "baroque pop",
+      "chamber pop",
+      "electropop",
+      "emo",
+      "emo pop",
+      "group turned solo project",
+      "pop punk",
+      "pop rock",
+      "power pop"
+    ],
+    "album": "Death of a Bachelor",
+    "year": "2016"
+  },
+  {
+    "title": "Wealth & Hellness (feat. Will Wood)",
+    "artists": [
+      "Human Zoo"
+    ],
+    "is_explicit": false,
+    "duration": 218,
+    "genres": [],
+    "album": "Wealth & Hellness",
+    "year": "2022"
+  },
+  {
+    "title": "Is This Just A Dream",
+    "artists": [
+      "Louie Zong"
+    ],
+    "is_explicit": false,
+    "duration": 189,
+    "genres": [
+      "jazz"
+    ],
+    "album": "Let's-A Go!",
+    "year": "2023"
+  },
+  {
+    "title": "classic j dies and goes to hell part 1",
+    "artists": [
+      "glass beach"
+    ],
+    "is_explicit": false,
+    "duration": 305,
+    "genres": [
+      "bedroom pop",
+      "emo",
+      "indie rock",
+      "punk",
+      "trans"
+    ],
+    "album": "the first glass beach album",
+    "year": "2019"
+  },
+  {
+    "title": "Shiny Object Syndrome",
+    "artists": [
+      "Daniel Thrasher"
+    ],
+    "is_explicit": false,
+    "duration": 209,
+    "genres": [],
+    "album": "Shiny Object Syndrome",
+    "year": "2022"
+  },
+  {
+    "title": "Charity Auction Ninja",
+    "artists": [
+      "Pepper Coyote"
+    ],
+    "is_explicit": false,
+    "duration": 192,
+    "genres": [
+      "folk",
+      "furry",
+      "musical",
+      "progressive rock",
+      "punk rock",
+      "rock"
+    ],
+    "album": "Still Waiting",
+    "year": "2024"
+  },
+  {
+    "title": "Devil Town",
+    "artists": [
+      "Mother Mother"
+    ],
+    "is_explicit": false,
+    "duration": 221,
+    "genres": [],
+    "album": "Unknown Album",
+    "year": null
+  },
+  {
+    "title": "MOB CHOIR - 99.9 (Schwank Bootleg)",
+    "artists": [
+      "Schwank"
+    ],
+    "is_explicit": false,
+    "duration": 124,
+    "genres": [
+      "virtual youtuber",
+      "vocalist"
+    ],
+    "album": "Unknown Album",
+    "year": null
+  },
+  {
+    "title": "99.9 (feat. sajou no hana)",
+    "artists": [
+      "MOB CHOIR"
+    ],
+    "is_explicit": false,
+    "duration": 189,
+    "genres": [],
+    "album": "99.9",
+    "year": "2019"
+  },
+  {
+    "title": "Dark Side",
+    "artists": [
+      "Blind Channel"
+    ],
+    "is_explicit": false,
+    "duration": 178,
+    "genres": [
+      "ambient",
+      "dark ambient",
+      "drone",
+      "electronic",
+      "experimental",
+      "musique concr\u00e8te"
+    ],
+    "album": "Lifestyles of the Sick & Dangerous",
+    "year": "2022"
+  },
+  {
+    "title": "Teenage Dirtbag",
+    "artists": [
+      "Wheatus"
+    ],
+    "is_explicit": true,
+    "duration": 242,
+    "genres": [
+      "alternative rock",
+      "pop rock",
+      "power pop",
+      "rock"
+    ],
+    "album": "Wheatus",
+    "year": "2000"
+  },
+  {
+    "title": "Everybody Talks",
+    "artists": [
+      "Neon Trees"
+    ],
+    "is_explicit": false,
+    "duration": 178,
+    "genres": [
+      "indie",
+      "provo",
+      "utah"
+    ],
+    "album": "Picture Show",
+    "year": "2012"
+  },
+  {
+    "title": "YOUR HEAD'S ON FIRE",
+    "artists": [
+      "Louie Zong"
+    ],
+    "is_explicit": false,
+    "duration": 120,
+    "genres": [
+      "jazz"
+    ],
+    "album": "YOUR HEAD'S ON FIRE",
+    "year": "2022"
+  },
+  {
+    "title": "YOUTUBE SHORTS RUINED AN ENTIRE GENERATION OF MEN! (skit)",
+    "artists": [
+      "ISSBROKIE"
+    ],
+    "is_explicit": true,
+    "duration": 149,
+    "genres": [],
+    "album": "BOMINATION!",
+    "year": "2025"
+  },
+  {
+    "title": "PLASTIC! (EVERYBODY HATES US NOW!)",
+    "artists": [
+      "ISSBROKIE"
+    ],
+    "is_explicit": true,
+    "duration": 128,
+    "genres": [],
+    "album": "BOMINATION!",
+    "year": "2025"
+  },
+  {
+    "title": "I WON'T AGREE TO DISAGREE ON MY EXISTENCE!",
+    "artists": [
+      "ISSBROKIE"
+    ],
+    "is_explicit": true,
+    "duration": 79,
+    "genres": [],
+    "album": "BOMINATION!",
+    "year": "2025"
+  },
+  {
+    "title": "\"ABSOLUTE TERRITORY\" - Ken Ashcorp (OVERDRIVE MIX)",
+    "artists": [
+      "KETSU!"
+    ],
+    "is_explicit": false,
+    "duration": 265,
+    "genres": [
+      "electronic",
+      "synthwave",
+      "darksynth"
+    ],
+    "album": "Unknown Album",
+    "year": null
+  },
+  {
+    "title": "YOU DONT REALLY WANT FREEDOM!",
+    "artists": [
+      "ISSBROKIE"
+    ],
+    "is_explicit": true,
+    "duration": 119,
+    "genres": [],
+    "album": "BOMINATION!",
+    "year": "2025"
+  },
+  {
+    "title": "GODHANDUK",
+    "artists": [
+      "GODHANDUSA, BVDLVD, & ISSBROKIE"
+    ],
+    "is_explicit": true,
+    "duration": 209,
+    "genres": [],
+    "album": "GODHANDUK",
+    "year": "2025"
+  },
+  {
+    "title": "Stop Playing With Me",
+    "artists": [
+      "Tyler, The Creator"
+    ],
+    "is_explicit": false,
+    "duration": 149,
+    "genres": [
+      "hardcore hip hop",
+      "hip hop",
+      "horrorcore",
+      "west coast hip hop"
+    ],
+    "album": "Unknown Album",
+    "year": null
+  },
+  {
+    "title": "Ring Ring Ring",
+    "artists": [
+      "Tyler, The Creator"
+    ],
+    "is_explicit": true,
+    "duration": 202,
+    "genres": [
+      "hardcore hip hop",
+      "hip hop",
+      "horrorcore",
+      "west coast hip hop"
+    ],
+    "album": "DON'T TAP THE GLASS",
+    "year": "2025"
+  },
+  {
+    "title": "Sucka Free",
+    "artists": [
+      "Tyler, The Creator"
+    ],
+    "is_explicit": true,
+    "duration": 162,
+    "genres": [
+      "hardcore hip hop",
+      "hip hop",
+      "horrorcore",
+      "west coast hip hop"
+    ],
+    "album": "DON'T TAP THE GLASS",
+    "year": "2025"
+  },
+  {
+    "title": "CHEEZY STREET (feat. Dante NK)",
+    "artists": [
+      "Louie Zong"
+    ],
+    "is_explicit": false,
+    "duration": 142,
+    "genres": [
+      "jazz"
+    ],
+    "album": "RAT TAXI",
+    "year": "2024"
+  },
+  {
+    "title": "MIX. 01 - PICKMEUP!",
+    "artists": [
+      "femtanyl"
+    ],
+    "is_explicit": false,
+    "duration": 205,
+    "genres": [
+      "breakcore",
+      "digital hardcore",
+      "furry",
+      "webcore"
+    ],
+    "album": "Unknown Album",
+    "year": null
+  },
+  {
+    "title": "Temptation Sensation (Main Title)",
+    "artists": [
+      "Heinz Kiessling"
+    ],
+    "is_explicit": false,
+    "duration": 173,
+    "genres": [
+      "light music"
+    ],
+    "album": "It's Always Sunny In Philadelphia (Music from the Original FX Series)",
+    "year": null
+  },
+  {
+    "title": "Chonny Jash - Ain't No Rest for the Wicked (Cage The Elephant Cover)",
+    "artists": [
+      "Chonny Jash"
+    ],
+    "is_explicit": false,
+    "duration": 217,
+    "genres": [],
+    "album": "Unknown Album",
+    "year": null
+  },
+  {
+    "title": "\u5c11\u5973A - Young Girl A",
+    "artists": [
+      "siinamota"
+    ],
+    "is_explicit": false,
+    "duration": 222,
+    "genres": [
+      "likedis auto"
+    ],
+    "album": "Alive",
+    "year": "2015"
+  },
+  {
+    "title": "Better Left Unanswered",
+    "artists": [
+      "Sevish"
+    ],
+    "is_explicit": false,
+    "duration": 192,
+    "genres": [
+      "electronic",
+      "fibonacci_sequence",
+      "golden_ratio",
+      "idm",
+      "microtonal",
+      "xenharmonic"
+    ],
+    "album": "Horixens",
+    "year": "2019"
+  },
+  {
+    "title": "Thermodynamic Lawyer Esq, G.F.D.",
+    "artists": [
+      "Will Wood and the Tapeworms"
+    ],
+    "is_explicit": true,
+    "duration": 220,
+    "genres": [],
+    "album": "Everything is a Lot",
+    "year": "2015"
+  },
+  {
+    "title": "Hand Me My Shovel, I'm Going In!",
+    "artists": [
+      "Will Wood and the Tapeworms"
+    ],
+    "is_explicit": false,
+    "duration": 352,
+    "genres": [],
+    "album": "SELF-iSH",
+    "year": "2016"
+  },
+  {
+    "title": "Beggin'",
+    "artists": [
+      "M\u00e5neskin"
+    ],
+    "is_explicit": false,
+    "duration": 212,
+    "genres": [
+      "alternative rock",
+      "funk rock",
+      "glam rock",
+      "hard rock",
+      "pop rock",
+      "rock",
+      "rock and roll"
+    ],
+    "album": "Chosen",
+    "year": "2017"
+  },
+  {
+    "title": "Flamingo",
+    "artists": [
+      "Kero Kero Bonito"
+    ],
+    "is_explicit": false,
+    "duration": 198,
+    "genres": [
+      "rock",
+      "electronic",
+      "electro",
+      "hip hop",
+      "reggae",
+      "electropop",
+      "pop rock",
+      "pop rap",
+      "dancehall",
+      "bitpop",
+      "chiptune",
+      "uk funky"
+    ],
+    "album": "Flamingo",
+    "year": "2014"
+  },
+  {
+    "title": "When I'm Dead",
+    "artists": [
+      "Bear Ghost"
+    ],
+    "is_explicit": false,
+    "duration": 208,
+    "genres": [
+      "adventure rock",
+      "progressive rock",
+      "rock"
+    ],
+    "album": "Jiminy",
+    "year": "2023"
+  },
+  {
+    "title": "Butts Tits Money",
+    "artists": [
+      "KNOWER"
+    ],
+    "is_explicit": false,
+    "duration": 215,
+    "genres": [
+      "electropop",
+      "synth funk"
+    ],
+    "album": "Unknown Album",
+    "year": null
+  },
+  {
+    "title": "Big Poe (feat. Sk8brd)",
+    "artists": [
+      "Tyler, The Creator",
+      "Pharrell Williams"
+    ],
+    "is_explicit": true,
+    "duration": 183,
+    "genres": [
+      "hardcore hip hop",
+      "hip hop",
+      "horrorcore",
+      "west coast hip hop"
+    ],
+    "album": "DON'T TAP THE GLASS",
+    "year": "2025"
+  },
+  {
+    "title": "Me and the Birds",
+    "artists": [
+      "Duster"
+    ],
+    "is_explicit": false,
+    "duration": 96,
+    "genres": [
+      "rock",
+      "indie rock",
+      "space rock"
+    ],
+    "album": "Contemporary Movement",
+    "year": "2000"
+  },
+  {
+    "title": "All Time",
+    "artists": [
+      "KNOWER"
+    ],
+    "is_explicit": false,
+    "duration": 226,
+    "genres": [
+      "synth-pop"
+    ],
+    "album": "Life",
+    "year": "2016"
+  },
+  {
+    "title": "Fu\u010d\u00edk: Entry of the Gladiators (Arr. for Brass Ensemble)",
+    "artists": [
+      "Philip Jones Brass Ensemble",
+      "Elgar Howarth"
+    ],
+    "is_explicit": false,
+    "duration": 179,
+    "genres": [
+      "classical"
+    ],
+    "album": "40 Famous Marches",
+    "year": "1999"
+  },
+  {
+    "title": "SEWER SWING",
+    "artists": [
+      "Louie Zong"
+    ],
+    "is_explicit": false,
+    "duration": 75,
+    "genres": [],
+    "album": "RAT TAXI",
+    "year": "2024"
+  },
+  {
+    "title": "Futurama Main Theme (From \"Futurama\"/C. Tyng Extended Version)",
+    "artists": [
+      "Christopher Tyng"
+    ],
+    "is_explicit": false,
+    "duration": 301,
+    "genres": [],
+    "album": "Futurama Main Theme (From \"Futurama\")",
+    "year": "2012"
+  },
+  {
+    "title": "The Irish Drinking Song (feat. The Gammy Fluthers)",
+    "artists": [
+      "Kyle Gordon"
+    ],
+    "is_explicit": true,
+    "duration": 160,
+    "genres": [
+      "comedy",
+      "parody"
+    ],
+    "album": "The Irish Drinking Song",
+    "year": "2024"
+  },
+  {
+    "title": "One For the Money",
+    "artists": [
+      "Escape The Fate"
+    ],
+    "is_explicit": true,
+    "duration": 200,
+    "genres": [
+      "rock",
+      "hard rock",
+      "emo",
+      "alternative metal",
+      "post-hardcore",
+      "emocore"
+    ],
+    "album": "Ungrateful (Deluxe)",
+    "year": "2013"
+  },
+  {
+    "title": "Jump Around",
+    "artists": [
+      "House Of Pain"
+    ],
+    "is_explicit": false,
+    "duration": 215,
+    "genres": [],
+    "album": "House of Pain (Fine Malt Lyrics)",
+    "year": "1992"
+  },
+  {
+    "title": "BlackBoxWarrior - OKULTRA",
+    "artists": [
+      "Will Wood"
+    ],
+    "is_explicit": false,
+    "duration": 295,
+    "genres": [],
+    "album": "The Normal Album",
+    "year": "2020"
+  },
+  {
+    "title": "Paralyzer",
+    "artists": [
+      "Finger Eleven"
+    ],
+    "is_explicit": false,
+    "duration": 209,
+    "genres": [
+      "rock",
+      "heavy metal",
+      "hard rock",
+      "alternative",
+      "post-grunge",
+      "alternative metal",
+      "pop/rock"
+    ],
+    "album": "Them vs. You vs. Me",
+    "year": "2007"
+  },
+  {
+    "title": "Anonymous",
+    "artists": [
+      "Cory Wong"
+    ],
+    "is_explicit": false,
+    "duration": 268,
+    "genres": [
+      "funk",
+      "guitar",
+      "jazz",
+      "r&b",
+      "smooth jazz"
+    ],
+    "album": "The Lucky One",
+    "year": "2023"
+  },
+  {
+    "title": "Crash The Car",
+    "artists": [
+      "KNOWER"
+    ],
+    "is_explicit": false,
+    "duration": 342,
+    "genres": [
+      "electronic",
+      "electropop",
+      "experimental"
+    ],
+    "album": "Unknown Album",
+    "year": null
+  },
+  {
+    "title": "The Sorcerer",
+    "artists": [
+      "Cory Wong, Metropole Orkest, & Jules Buckley"
+    ],
+    "is_explicit": false,
+    "duration": 254,
+    "genres": [
+      "pop",
+      "jazz",
+      "funk",
+      "soul",
+      "jazz-funk",
+      "minneapolis sound"
+    ],
+    "album": "Starship Syncopation",
+    "year": "2024"
+  },
+  {
     "title": "Monopoly Money",
     "artists": [
       "Moon Walker"
@@ -52,7 +2967,7 @@
       "Hakdo"
     ],
     "is_explicit": false,
-    "duration": 126,
+    "duration": 128,
     "genres": [
       "americana",
       "children's music",
@@ -144,7 +3059,7 @@
     "year": "2025"
   },
   {
-    "title": "Empty Gardens",
+    "title": "Empty Gardens (Instrumental)",
     "artists": [
       "Eidola"
     ],
@@ -1464,7 +4379,7 @@
     "year": "2012"
   },
   {
-    "title": "His Name Is Lancelot (Original Broadway Cast Recording: \"Spamalot\")",
+    "title": "His Name Is Lancelot (From \"Spamalot\" Original Broadway Cast Recording)",
     "artists": [
       "Hank Azaria, David Hyde Pierce, Christopher Sieber, Christian Borle, Ensemble, and Todd Ellison"
     ],
@@ -1530,7 +4445,7 @@
     "year": "2001"
   },
   {
-    "title": "Monks Chant / He Is Not Dead Yet (Original Broadway Cast Recording: \"Spamalot\")",
+    "title": "Monks Chant / He Is Not Dead Yet (From \"Spamalot\" Original Broadway Cast Recording)",
     "artists": [
       "Christian Borle, Hank Azaria, David Hyde Pierce, Ensemble, and Todd Ellison"
     ],
@@ -1552,7 +4467,7 @@
     "year": "2014"
   },
   {
-    "title": "You Won't Succeed On Broadway (Original Broadway Cast Recording: \"Spamalot\")",
+    "title": "You Won't Succeed On Broadway (From \"Spamalot\" Original Broadway Cast Recording)",
     "artists": [
       "David Hyde Pierce, Ensemble, & Todd Ellison"
     ],
@@ -2725,7 +5640,7 @@
     "genres": [
       "rock"
     ],
-    "album": "Initiative",
+    "album": "Calm Ya Farm",
     "year": "2023"
   },
   {
@@ -3666,7 +6581,7 @@
     "year": null
   },
   {
-    "title": "Grow Wings and Fly... (Live in Austin '24)",
+    "title": "Grow Wings and Fly (Live in Austin '24)",
     "artists": [
       "bootleg gizzard"
     ],
@@ -4291,10 +7206,10 @@
       "Gunter Kallmann Choir"
     ],
     "is_explicit": false,
-    "duration": 200,
+    "duration": 202,
     "genres": [],
-    "album": "The Fantastic Sound Of",
-    "year": "2010"
+    "album": "Bar Jazz by JazzEcho",
+    "year": "2023"
   },
   {
     "title": "The Lamp Is Low",
@@ -5499,7 +8414,7 @@
       "mcyt",
       "youtuber"
     ],
-    "album": "Santa Claus Is Coming To Town",
+    "album": "A Very 1999 Christmas",
     "year": "2024"
   },
   {
@@ -5948,7 +8863,7 @@
     "artists": [
       "bootleg gizzard"
     ],
-    "is_explicit": false,
+    "is_explicit": true,
     "duration": 222,
     "genres": [
       "australian",
@@ -5970,7 +8885,7 @@
     "year": "2024"
   },
   {
-    "title": "Let Me Mend the Past (Live at The Gorge '24)",
+    "title": "Let Me Mend The Past (Live at The Gorge '24)",
     "artists": [
       "bootleg gizzard"
     ],
@@ -6027,7 +8942,7 @@
     "artists": [
       "bootleg gizzard"
     ],
-    "is_explicit": false,
+    "is_explicit": true,
     "duration": 393,
     "genres": [
       "australian",
@@ -6609,7 +9524,6 @@
   {
     "title": "Ren - Right Here, Right Now (Fatboy Slim)",
     "artists": [
-      "CHINCHILLA",
       "Ren"
     ],
     "is_explicit": false,
@@ -7671,7 +10585,7 @@
     "year": "2017"
   },
   {
-    "title": "Fishing For Fishies",
+    "title": "Fishing for Fishies",
     "artists": [
       "King Gizzard & the Lizard Wizard"
     ],
@@ -7922,7 +10836,7 @@
       "OMA"
     ],
     "is_explicit": false,
-    "duration": 156,
+    "duration": 152,
     "genres": [],
     "album": "Bread 'n' Butter",
     "year": "2024"
@@ -10161,12 +13075,12 @@
     "year": "2015"
   },
   {
-    "title": "How Heavy This Axe (2023 Remastered Version)",
+    "title": "How Heavy This Axe",
     "artists": [
       "The Sword"
     ],
     "is_explicit": false,
-    "duration": 187,
+    "duration": 186,
     "genres": [
       "rock",
       "heavy metal",
@@ -10175,8 +13089,8 @@
       "doom metal",
       "stoner metal"
     ],
-    "album": "Gods of the Earth (15th Anniversary Edition)",
-    "year": "2023"
+    "album": "Gods of the Earth",
+    "year": "2008"
   },
   {
     "title": "Freya",
@@ -12103,7 +15017,7 @@
     "year": null
   },
   {
-    "title": "Mars for the Rich (Live at Red Rocks '22)",
+    "title": "Mars For The Rich (Live At Red Rocks '22)",
     "artists": [
       "bootleg gizzard"
     ],
@@ -12129,7 +15043,7 @@
     "year": "2023"
   },
   {
-    "title": "Magenta Mountain (Live at Red Rocks '22)",
+    "title": "Magenta Mountain (Live At Red Rocks '22)",
     "artists": [
       "bootleg gizzard"
     ],
@@ -14910,8 +17824,8 @@
       "lo-fi",
       "lo-fi hip hop"
     ],
-    "album": "Origin",
-    "year": "2015"
+    "album": "Unknown Album",
+    "year": null
   },
   {
     "title": "Proud of You (feat. Alicks)",
