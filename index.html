@@ -115,6 +115,30 @@
             <h2>Explicit Content (Overall)</h2>
             <canvas id="explicitChart"></canvas>
         </div>
+
+        <div class="chart-container">
+            <h2>Genre Trends Over Time</h2>
+            <p>Position in the playlist is used as a proxy for when a song was added &mdash; left is older, right is more recent. Shows the top genres' share of songs added around that time.</p>
+            <canvas id="genreTrendChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <h2>Taste Timeline: Release Year of Songs Added Over Time</h2>
+            <p>Are more recently-added songs older classics or new releases? Average release year of songs, bucketed by playlist position.</p>
+            <canvas id="tasteTimelineChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <h2>Rising &amp; Fading Genres</h2>
+            <p>Comparing the first half of the playlist to the second half &mdash; which genres are showing up more (rising) or less (fading) lately?</p>
+            <canvas id="risingFadingChart"></canvas>
+        </div>
+
+        <div class="chart-container small">
+            <h2>Genre Diversity Over Time</h2>
+            <p>Number of distinct genres appearing per chunk of the playlist &mdash; a rough measure of how eclectic each era of your taste was.</p>
+            <canvas id="genreDiversityChart"></canvas>
+        </div>
     </main>
 
     <script>
@@ -171,6 +195,23 @@
                         const numArtists = parseInt(filterValue);
                         title = `${numArtists} Artist${numArtists > 1 ? 's' : ''} on a Song`;
                         filteredSongs = songs.filter(s => (s.artists || []).length === numArtists);
+                        break;
+                    case 'positionBucket': {
+                        const bucket = positionBuckets[parseInt(filterValue)];
+                        title = `Playlist Positions ${bucket.start}-${bucket.end}`;
+                        filteredSongs = songs.filter(s => s.position >= bucket.start && s.position <= bucket.end);
+                        break;
+                    }
+                    case 'genreBucket': {
+                        const [bucketIdx, genre] = filterValue.split('::');
+                        const bucket = positionBuckets[parseInt(bucketIdx)];
+                        title = `${genre}, Playlist Positions ${bucket.start}-${bucket.end}`;
+                        filteredSongs = songs.filter(s => s.position >= bucket.start && s.position <= bucket.end && (s.genres || []).includes(genre));
+                        break;
+                    }
+                    case 'risingFading':
+                        title = `Genre: ${filterValue}`;
+                        filteredSongs = songs.filter(s => (s.genres || []).includes(filterValue));
                         break;
                 }
 
@@ -392,6 +433,161 @@
                         const label = genreExplicitnessChart.data.labels[firstPoint.index];
                         showSongsInModal('genre', label);
                     }
+            };
+
+            // --- Position/recency-based charts ---
+            // Playlist position is used throughout as a proxy for "when a song was added".
+            const maxPosition = Math.max(...songs.map(s => s.position || 0));
+            const NUM_BUCKETS = 15;
+            const bucketSize = Math.ceil((maxPosition + 1) / NUM_BUCKETS);
+            const positionBuckets = [];
+            for (let i = 0; i < NUM_BUCKETS; i++) {
+                const start = i * bucketSize;
+                const end = Math.min(start + bucketSize - 1, maxPosition);
+                if (start > maxPosition) break;
+                positionBuckets.push({ start, end, songs: [] });
+            }
+            songs.forEach(song => {
+                const idx = Math.min(Math.floor((song.position || 0) / bucketSize), positionBuckets.length - 1);
+                positionBuckets[idx].songs.push(song);
+            });
+            const bucketLabels = positionBuckets.map(b => `${b.start}-${b.end}`);
+
+            // Genre trends: share of each top genre within each bucket
+            const topGenresForTrend = sortedGenres.slice(0, 20).map(item => item[0]);
+            const trendColors = [
+                '#ff6384', '#36a2eb', '#ffce56', '#4bc0c0', '#9966ff', '#ff9f40', '#c9cbcf', '#8bc34a',
+                '#e91e63', '#03a9f4', '#cddc39', '#009688', '#673ab7', '#ff5722', '#607d8b', '#8bc34a',
+                '#f06292', '#4dd0e1', '#ba68c8', '#ffb74d'
+            ];
+            const bucketGenreCounts = positionBuckets.map(bucket => {
+                const counts = topGenresForTrend.map(genre => bucket.songs.filter(s => (s.genres || []).includes(genre)).length);
+                const total = counts.reduce((a, b) => a + b, 0);
+                return { counts, total };
+            });
+            const genreTrendDatasets = topGenresForTrend.map((genre, i) => {
+                const data = bucketGenreCounts.map(({ counts, total }) => {
+                    if (total === 0) return 0;
+                    return +(100 * counts[i] / total).toFixed(1);
+                });
+                return {
+                    label: genre,
+                    data,
+                    backgroundColor: trendColors[i % trendColors.length],
+                    stack: 'genres'
+                };
+            });
+
+            const genreTrendChart = new Chart(document.getElementById('genreTrendChart'), {
+                type: 'bar',
+                data: { labels: bucketLabels, datasets: genreTrendDatasets },
+                options: {
+                    scales: {
+                        y: { stacked: true, title: { display: true, text: 'Share of top-20 genre tags in this range (%)' } },
+                        x: { stacked: true, title: { display: true, text: 'Playlist position range (older → more recent)' } }
+                    },
+                    onClick: (event, elements, chart) => {
+                        const points = chart.getElementsAtEventForMode(event, 'nearest', { intersect: true }, true);
+                        if (points.length) {
+                            const { datasetIndex, index } = points[0];
+                            const genre = chart.data.datasets[datasetIndex].label;
+                            showSongsInModal('genreBucket', `${index}::${genre}`);
+                        }
+                    }
+                }
+            });
+
+            // Taste timeline: average release year per bucket
+            const tasteTimelineData = positionBuckets.map(bucket => {
+                const withYear = bucket.songs.filter(s => s.year).map(s => parseInt(s.year)).filter(y => !isNaN(y));
+                if (withYear.length === 0) return null;
+                return +(withYear.reduce((a, b) => a + b, 0) / withYear.length).toFixed(1);
+            });
+
+            const tasteTimelineChart = new Chart(document.getElementById('tasteTimelineChart'), {
+                type: 'line',
+                data: {
+                    labels: bucketLabels,
+                    datasets: [{
+                        label: 'Avg. release year',
+                        data: tasteTimelineData,
+                        borderColor: '#9966ff',
+                        backgroundColor: '#9966ff',
+                        spanGaps: true,
+                        tension: 0.3
+                    }]
+                },
+                options: {
+                    plugins: { legend: { display: false } },
+                    scales: { x: { title: { display: true, text: 'Playlist position range (older → more recent)' } } }
+                }
+            });
+            tasteTimelineChart.options.onClick = function(event) {
+                const points = tasteTimelineChart.getElementsAtEventForMode(event, 'nearest', { intersect: true }, true);
+                if (points.length) showSongsInModal('positionBucket', points[0].index);
+            };
+
+            // Rising & fading genres: first half vs second half of the playlist
+            const midpoint = Math.floor((maxPosition + 1) / 2);
+            const firstHalf = songs.filter(s => (s.position || 0) < midpoint);
+            const secondHalf = songs.filter(s => (s.position || 0) >= midpoint);
+            const genreShare = (list, genre) => list.length ? (100 * list.filter(s => (s.genres || []).includes(genre)).length / list.length) : 0;
+
+            const allGenresForChange = Object.keys(genreCounts);
+            const genreChanges = allGenresForChange.map(genre => {
+                const before = genreShare(firstHalf, genre);
+                const after = genreShare(secondHalf, genre);
+                return { genre, before, after, delta: after - before };
+            }).filter(g => genreCounts[g.genre] >= 5);
+            genreChanges.sort((a, b) => b.delta - a.delta);
+            const risingFading = [...genreChanges.slice(0, 10), ...genreChanges.slice(-10).reverse()];
+            const seenRF = new Set();
+            const risingFadingUnique = risingFading.filter(g => {
+                if (seenRF.has(g.genre)) return false;
+                seenRF.add(g.genre);
+                return true;
+            });
+            risingFadingUnique.sort((a, b) => a.delta - b.delta);
+
+            const risingFadingChart = new Chart(document.getElementById('risingFadingChart'), {
+                type: 'bar',
+                data: {
+                    labels: risingFadingUnique.map(g => g.genre),
+                    datasets: [{
+                        label: 'Change in share (percentage points, first half → second half)',
+                        data: risingFadingUnique.map(g => +g.delta.toFixed(1)),
+                        backgroundColor: risingFadingUnique.map(g => g.delta >= 0 ? '#4bc0c0' : '#ff6384')
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    plugins: { legend: { display: false } },
+                    scales: { x: { title: { display: true, text: 'Percentage point change' } } }
+                }
+            });
+            risingFadingChart.options.onClick = createClickHandler(risingFadingChart, 'risingFading');
+
+            // Genre diversity over time: unique genre count per bucket
+            const genreDiversityData = positionBuckets.map(bucket => {
+                const uniqueGenres = new Set();
+                bucket.songs.forEach(s => (s.genres || []).forEach(g => uniqueGenres.add(g)));
+                return uniqueGenres.size;
+            });
+
+            const genreDiversityChart = new Chart(document.getElementById('genreDiversityChart'), {
+                type: 'bar',
+                data: {
+                    labels: bucketLabels,
+                    datasets: [{ label: 'Distinct genres', data: genreDiversityData, backgroundColor: '#8bc34a' }]
+                },
+                options: {
+                    plugins: { legend: { display: false } },
+                    scales: { x: { title: { display: true, text: 'Playlist position range (older → more recent)' } } }
+                }
+            });
+            genreDiversityChart.options.onClick = function(event) {
+                const points = genreDiversityChart.getElementsAtEventForMode(event, 'nearest', { intersect: true }, true);
+                if (points.length) showSongsInModal('positionBucket', points[0].index);
             };
         }
 
