@@ -7,6 +7,7 @@
     <title>Henry Martin's music taste, by the numbers</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/holiday.css@0.11.2" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
     <style>
         :root {
             --max-body-width: 90% !important;
@@ -57,6 +58,39 @@
             overflow-y: auto;
             padding-left: 1.5rem;
         }
+
+        /* Genre space plot controls */
+        .genre-space-controls {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .genre-space-controls button {
+            padding: 0.4rem 0.9rem;
+            border: var(--border-width, 1px) solid var(--border-color);
+            border-radius: var(--border-radius, 0.25rem);
+            background: var(--background-color);
+            color: var(--text-color);
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .genre-space-controls button:hover {
+            border-color: var(--border-hover-color);
+        }
+
+        .genre-space-controls button.active {
+            background: var(--text-color);
+            color: var(--background-color);
+            border-color: var(--text-color);
+        }
+
+        #genreSpacePlot {
+            width: 100%;
+            height: 75vh;
+        }
     </style>
 </head>
 
@@ -76,6 +110,19 @@
     </dialog>
 
     <main>
+        <div class="chart-container">
+            <h2>Genre Space</h2>
+            <div class="genre-space-controls">
+                <span>Method:</span>
+                <button id="btnMethodPca" class="genre-space-btn active" data-group="method" data-value="pca">PCA</button>
+                <button id="btnMethodUmap" class="genre-space-btn" data-group="method" data-value="umap">UMAP</button>
+                <span style="margin-left: 1rem;">Dimensions:</span>
+                <button id="btnDims2" class="genre-space-btn active" data-group="dims" data-value="2">2D</button>
+                <button id="btnDims3" class="genre-space-btn" data-group="dims" data-value="3">3D</button>
+            </div>
+            <div id="genreSpacePlot"></div>
+        </div>
+
         <div class="chart-container">
             <h2>Top Genres</h2>
             <canvas id="genreChart"></canvas>
@@ -118,25 +165,21 @@
 
         <div class="chart-container">
             <h2>Genre Trends Over Time</h2>
-            <p>Position in the playlist is used as a proxy for when a song was added &mdash; left is older, right is more recent. Shows the top genres' share of songs added around that time.</p>
             <canvas id="genreTrendChart"></canvas>
         </div>
 
         <div class="chart-container">
-            <h2>Taste Timeline: Release Year of Songs Added Over Time</h2>
-            <p>Are more recently-added songs older classics or new releases? Average release year of songs, bucketed by playlist position.</p>
+            <h2>Release Year of Songs Added Over Time</h2>
             <canvas id="tasteTimelineChart"></canvas>
         </div>
 
         <div class="chart-container">
             <h2>Rising &amp; Fading Genres</h2>
-            <p>Comparing the first half of the playlist to the second half &mdash; which genres are showing up more (rising) or less (fading) lately?</p>
             <canvas id="risingFadingChart"></canvas>
         </div>
 
         <div class="chart-container small">
             <h2>Genre Diversity Over Time</h2>
-            <p>Number of distinct genres appearing per chunk of the playlist &mdash; a rough measure of how eclectic each era of your taste was.</p>
             <canvas id="genreDiversityChart"></canvas>
         </div>
     </main>
@@ -213,6 +256,10 @@
                         title = `Genre: ${filterValue}`;
                         filteredSongs = songs.filter(s => (s.genres || []).includes(filterValue));
                         break;
+                    case 'position':
+                        title = 'Song';
+                        filteredSongs = songs.filter(s => s.position === filterValue);
+                        break;
                 }
 
                 modalTitle.textContent = `${title} (${filteredSongs.length} songs)`;
@@ -245,6 +292,111 @@
                     }
                 };
             }
+
+            let genreCoords = [];
+            try {
+                const coordsResponse = await fetch('genre_coords.json');
+                genreCoords = await coordsResponse.json();
+            } catch (e) {
+                console.warn('genre_coords.json not found - run export_coords.py to generate it. Genre Space plot will be empty.', e);
+            }
+
+            const FAMILY_COLORS = {
+                'metal/hardcore': '#e6194b',
+                'hip hop/rap': '#3cb44b',
+                'electronic': '#4363d8',
+                'rock': '#f58231',
+                'pop': '#911eb4',
+                'jazz/soul/funk': '#42d4f4',
+                'folk/country/acoustic': '#f032e6',
+                'soundtrack/vgm': '#bfef45',
+                'ambient/experimental': '#fabed4',
+                'other': '#469990'
+            };
+
+            let genreSpaceMethod = 'pca';
+            let genreSpaceDims = 2;
+
+            function renderGenreSpace() {
+                if (!genreCoords.length) return;
+                const key = `${genreSpaceMethod}${genreSpaceDims}`;
+                const families = [...new Set(genreCoords.map(s => s.family))];
+
+                const traces = families.map(family => {
+                    const subset = genreCoords.filter(s => s.family === family);
+                    const coords = subset.map(s => s[key]);
+                    const hoverText = subset.map(s =>
+                        `${s.title}<br>${s.artists.join(', ')}<br>${(s.genres || []).slice(0, 5).join(', ')}<br>year: ${s.year || '?'}`
+                    );
+                    const base = {
+                        name: family,
+                        text: hoverText,
+                        hoverinfo: 'text',
+                        marker: { size: genreSpaceDims === 3 ? 3 : 6, color: FAMILY_COLORS[family] || '#888', opacity: 0.75 },
+                        customdata: subset.map(s => s.position)
+                    };
+                    if (genreSpaceDims === 3) {
+                        return {
+                            ...base,
+                            type: 'scatter3d',
+                            mode: 'markers',
+                            x: coords.map(c => c[0]),
+                            y: coords.map(c => c[1]),
+                            z: coords.map(c => c[2])
+                        };
+                    }
+                    return {
+                        ...base,
+                        type: 'scattergl',
+                        mode: 'markers',
+                        x: coords.map(c => c[0]),
+                        y: coords.map(c => c[1])
+                    };
+                });
+
+                // Read the page's actual theme colors (from holiday.css's
+                // CSS vars, which already flip with prefers-color-scheme)
+                // instead of hardcoding a light template that clashes on dark.
+                const rootStyles = getComputedStyle(document.documentElement);
+                const textColor = rootStyles.getPropertyValue('--text-color').trim() || '#000';
+                const gridColor = rootStyles.getPropertyValue('--border-color').trim() || '#ccc';
+
+                Plotly.react('genreSpacePlot', traces, {
+                    paper_bgcolor: 'rgba(0,0,0,0)',
+                    plot_bgcolor: 'rgba(0,0,0,0)',
+                    font: { color: textColor },
+                    scene: {
+                        xaxis: { gridcolor: gridColor, zerolinecolor: gridColor },
+                        yaxis: { gridcolor: gridColor, zerolinecolor: gridColor },
+                        zaxis: { gridcolor: gridColor, zerolinecolor: gridColor }
+                    },
+                    xaxis: { gridcolor: gridColor, zerolinecolor: gridColor },
+                    yaxis: { gridcolor: gridColor, zerolinecolor: gridColor },
+                    margin: { l: 0, r: 0, t: 10, b: 0 },
+                    legend: { itemsizing: 'constant', font: { color: textColor } }
+                }, { responsive: true, displaylogo: false });
+
+                const plotEl = document.getElementById('genreSpacePlot');
+                plotEl.removeAllListeners && plotEl.removeAllListeners('plotly_click');
+                plotEl.on('plotly_click', (data) => {
+                    if (!data.points.length) return;
+                    const position = data.points[0].customdata;
+                    showSongsInModal('position', position);
+                });
+            }
+
+            document.querySelectorAll('.genre-space-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const group = btn.dataset.group;
+                    document.querySelectorAll(`.genre-space-btn[data-group="${group}"]`).forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    if (group === 'method') genreSpaceMethod = btn.dataset.value;
+                    if (group === 'dims') genreSpaceDims = parseInt(btn.dataset.value);
+                    renderGenreSpace();
+                });
+            });
+
+            renderGenreSpace();
 
             const genreCounts = {};
             songs.forEach(song => {
@@ -289,7 +441,6 @@
                 '7+ mins': 0,
             };
 
-            // This object will store the actual song objects for your modal.
             const songsInDurationBins = {
                 '0-1 min': [],
                 '1-2 mins': [],
@@ -436,7 +587,6 @@
             };
 
             // --- Position/recency-based charts ---
-            // Playlist position is used throughout as a proxy for "when a song was added".
             const maxPosition = Math.max(...songs.map(s => s.position || 0));
             const NUM_BUCKETS = 15;
             const bucketSize = Math.ceil((maxPosition + 1) / NUM_BUCKETS);
@@ -453,7 +603,6 @@
             });
             const bucketLabels = positionBuckets.map(b => `${b.start}-${b.end}`);
 
-            // Genre trends: share of each top genre within each bucket
             const topGenresForTrend = sortedGenres.slice(0, 20).map(item => item[0]);
             const trendColors = [
                 '#ff6384', '#36a2eb', '#ffce56', '#4bc0c0', '#9966ff', '#ff9f40', '#c9cbcf', '#8bc34a',
@@ -497,7 +646,6 @@
                 }
             });
 
-            // Taste timeline: average release year per bucket
             const tasteTimelineData = positionBuckets.map(bucket => {
                 const withYear = bucket.songs.filter(s => s.year).map(s => parseInt(s.year)).filter(y => !isNaN(y));
                 if (withYear.length === 0) return null;
@@ -527,7 +675,6 @@
                 if (points.length) showSongsInModal('positionBucket', points[0].index);
             };
 
-            // Rising & fading genres: first half vs second half of the playlist
             const midpoint = Math.floor((maxPosition + 1) / 2);
             const firstHalf = songs.filter(s => (s.position || 0) < midpoint);
             const secondHalf = songs.filter(s => (s.position || 0) >= midpoint);
@@ -567,7 +714,6 @@
             });
             risingFadingChart.options.onClick = createClickHandler(risingFadingChart, 'risingFading');
 
-            // Genre diversity over time: unique genre count per bucket
             const genreDiversityData = positionBuckets.map(bucket => {
                 const uniqueGenres = new Set();
                 bucket.songs.forEach(s => (s.genres || []).forEach(g => uniqueGenres.add(g)));
